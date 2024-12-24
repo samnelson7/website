@@ -25,7 +25,13 @@ export default function Layout({ children }: { children: React.ReactNode })  {
             Welcome to my website
           </Typography>
           <Typography variant="body1">
-            This is the homepage of my website. Here you can find information about me and my work.
+            I originally decided to create this website as a portfolio highlighting some of the work that I have done over the course of my degree, but it has slowly grown into a place for me to practice some of my frontend development skills. In the fall of 2024, I decided with my team to develop a web applicaiton to help patients find nearby emergency rooms that best fit their needs, and we used a combination of JavaScript, React, Tailwind CSS, Next.js, and various component libraries. So, I decided to use those newly learned skills to build my website myself!
+          </Typography>
+          <Typography variant="h4" component="h1" gutterBottom>
+            Welcome to my website
+          </Typography>
+          <Typography variant="body1">
+            I originally decided to create this website as a portfolio highlighting some of the work that I have done over the course of my degree, but it has slowly grown into a place for me to practice some of my frontend development skills. In the fall of 2024, I decided with my team to develop a web applicaiton to help patients find nearby emergency rooms that best fit their needs, and we used a combination of JavaScript, React, Tailwind CSS, Next.js, and various component libraries. So, I decided to use those newly learned skills to build my website myself!
           </Typography>
         </Box>
       </Container>
