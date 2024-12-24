@@ -43,8 +43,18 @@ const Header: React.FC<HeaderProps> = ({ onDrawerToggle }) => {
           Sam Nelson
         </Typography>
 
-        {/* Circular profile image */}
-        <IconButton onClick={handleMenuOpen} sx={{ ml: 2 }}>
+        {/* Circular profile image with hover effect and pointer cursor */}
+        <IconButton
+          onClick={handleMenuOpen}
+          sx={{
+            ml: 2,
+            "&:hover": {
+              transform: "scale(1.1)",  // Increase size on hover
+            },
+            cursor: "pointer", // Pointer cursor to show it's clickable
+            transition: "all 0.3s ease", // Smooth transition for hover effects
+          }}
+        >
           <Avatar
             alt="Sam Nelson"
             src="/images/profile.jpg"  // Use your image URL here
