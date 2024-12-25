@@ -1,116 +1,168 @@
 import React from "react";
-import { AppBar, Toolbar, Typography, IconButton, Menu, MenuItem, Avatar, Box } from "@mui/material";
-import { Menu as MenuIcon, ContentCopy as ClipboardIcon } from "@mui/icons-material";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  IconButton,
+  Menu,
+  MenuItem,
+  Avatar,
+  Box,
+  Button,
+  Snackbar,
+  Alert,
+} from "@mui/material";
+import { Menu as MenuIcon, LinkedIn as LinkedInIcon, GitHub as GitHubIcon, Email as EmailIcon } from "@mui/icons-material";
+import Link from "next/link";
 
 interface HeaderProps {
   onDrawerToggle: () => void;
 }
 
 const Header: React.FC<HeaderProps> = ({ onDrawerToggle }) => {
-  // State for the dropdown menu
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [copied, setCopied] = React.useState(false);
+  const [openSnackbar, setOpenSnackbar] = React.useState(false);
 
-  // Handle opening the menu
   const handleMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
 
-  // Handle closing the menu
   const handleMenuClose = () => {
     setAnchorEl(null);
   };
 
-  // Handle copying email to clipboard
   const handleCopyEmail = async () => {
     try {
       await navigator.clipboard.writeText("samnelson7@hotmail.com");
       setCopied(true);
-      setTimeout(() => setCopied(false), 1000);  // Reset copied state after 1 second
+      setOpenSnackbar(true); // Show Snackbar when email is copied
+      setTimeout(() => setOpenSnackbar(false), 3000); // Hide Snackbar after 3 seconds
     } catch (err) {
-      // Handle error silently
       console.error("Failed to copy email:", err);
     }
   };
 
   return (
-    <AppBar position="static" sx={{ bgcolor: "indigo" }}>
-      <Toolbar>
-        <IconButton color="inherit" edge="start" onClick={onDrawerToggle}>
+    <AppBar position="static" sx={{ bgcolor: "#1c375d" }}>
+      <Toolbar sx={{ display: "flex", alignItems: "center" }}>
+        {/* Mobile Drawer Toggle */}
+        <IconButton color="inherit" edge="start" onClick={onDrawerToggle} sx={{ display: { md: "none" } }}>
           <MenuIcon />
         </IconButton>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+
+        {/* Brand Name */}
+        <Typography variant="h6" component="div" sx={{ flexShrink: 0 }}>
           Sam Nelson
         </Typography>
 
-        {/* Circular profile image with hover effect and pointer cursor */}
-        <IconButton
-          onClick={handleMenuOpen}
-          sx={{
-            ml: 2,
-            "&:hover": {
-              transform: "scale(1.1)",  // Increase size on hover
-            },
-            cursor: "pointer", // Pointer cursor to show it's clickable
-            transition: "all 0.3s ease", // Smooth transition for hover effects
-          }}
-        >
-          <Avatar
-            alt="Sam Nelson"
-            src="/images/profile.jpg"  // Use your image URL here
-            sx={{ width: 50, height: 50 }}  // Adjust the size as needed
-          />
-        </IconButton>
+        {/* Navigation Links */}
+        <Box sx={{ display: "flex", alignItems: "center", ml: 4 }}>
+          {[
+            { text: "Home", to: "/" },
+            { text: "About Me", to: "/about" },
+            { text: "Projects", to: "/projects" },
+            { text: "Contact", to: "/contact" },
+          ].map(({ text, to }, index) => (
+            <React.Fragment key={index}>
+              <Button
+                component={Link}
+                href={to}
+                sx={{
+                  color: "white",
+                  textTransform: "none",
+                  "&:hover": { color: "lightgray" },
+                  padding: "6px 12px", // Optional: adjusts padding for a consistent button size
+                }}
+              >
+                {text}
+              </Button>
+              {/* Add a vertical line after each button except the last one */}
+              {index !== 3 && (
+                <Box
+                  sx={{
+                    width: "1px",
+                    height: "30px", // Adjust the height of the line
+                    backgroundColor: "grey",
+                    marginLeft: 2,
+                    marginRight: 2,
+                  }}
+                />
+              )}
+            </React.Fragment>
+          ))}
+        </Box>
+
+        {/* Avatar aligned to the right */}
+        <Box sx={{ ml: "auto" }}>
+          <IconButton
+            onClick={handleMenuOpen}
+            sx={{
+              "&:hover": { transform: "scale(1.1)" },
+              cursor: "pointer",
+              transition: "all 0.3s ease",
+            }}
+          >
+            <Avatar alt="Sam Nelson" src="/images/profile.jpg" sx={{ width: 50, height: 50 }} />
+          </IconButton>
+        </Box>
 
         {/* Dropdown Menu */}
         <Menu
           anchorEl={anchorEl}
           open={Boolean(anchorEl)}
           onClose={handleMenuClose}
-          MenuListProps={{
-            "aria-labelledby": "basic-button",
-          }}
+          MenuListProps={{ "aria-labelledby": "basic-button" }}
         >
-          {/* Email with Clipboard Icon */}
+          {/* Email Menu Item */}
           <MenuItem
             onClick={() => {
-              handleCopyEmail(); // Copy the email
-              handleMenuClose(); // Close the menu
+              handleCopyEmail();
+              handleMenuClose();
             }}
             sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}
           >
             <Box component="span" sx={{ textDecoration: "none", color: "inherit" }}>
-              Email: samnelson7@hotmail.com
+              <EmailIcon sx={{ mr: 2 }} /> Email: samnelson7@hotmail.com
             </Box>
-            <IconButton sx={{ color: "inherit" }}>
-              <ClipboardIcon />
-            </IconButton>
           </MenuItem>
-
-          {/* LinkedIn */}
+          {/* LinkedIn Menu Item */}
           <MenuItem
             onClick={() => {
               window.open("https://www.linkedin.com/in/sam-nelson-73003a250/", "_blank", "noopener noreferrer");
-              handleMenuClose(); // Close the menu
+              handleMenuClose();
             }}
+            sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}
           >
-            <Box sx={{ textDecoration: "none", color: "inherit" }}>
-              LinkedIn: Sam Nelson
+            <Box component="span" sx={{ textDecoration: "none", color: "inherit" }}>
+              <LinkedInIcon sx={{ mr: 2 }} /> LinkedIn: Sam Nelson
             </Box>
           </MenuItem>
-
-          {/* GitHub */}
+          {/* GitHub Menu Item */}
           <MenuItem
             onClick={() => {
               window.open("https://github.com/samnelson7", "_blank", "noopener noreferrer");
-              handleMenuClose(); // Close the menu
+              handleMenuClose();
             }}
+            sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}
           >
-            <Box sx={{ textDecoration: "none", color: "inherit" }}>
-              GitHub: Samnelson7
+            <Box component="span" sx={{ textDecoration: "none", color: "inherit" }}>
+              <GitHubIcon sx={{ mr: 2 }} /> GitHub: samnelson7
             </Box>
           </MenuItem>
         </Menu>
+
+        {/* Success Snackbar (Pop-up box) */}
+        <Snackbar
+          open={openSnackbar}
+          autoHideDuration={2000} // Automatically hide after 2 seconds
+          anchorOrigin={{ vertical: "bottom", horizontal: "right" }} // Position at bottom-right
+          onClose={() => setOpenSnackbar(false)}
+        >
+          <Alert onClose={() => setOpenSnackbar(false)} severity="success" sx={{ width: "100%" }}>
+            Email copied successfully!
+          </Alert>
+        </Snackbar>
       </Toolbar>
     </AppBar>
   );

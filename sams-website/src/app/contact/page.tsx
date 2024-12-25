@@ -1,32 +1,38 @@
 "use client";
 
 import React, { useState } from "react";
-import { CssBaseline, Container, Typography, Box, Grid, IconButton } from "@mui/material";
+import { CssBaseline, Container, Typography, Box, Grid, Snackbar, Alert } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
-import ContentCopyIcon from "@mui/icons-material/ContentCopy";
-import CheckCircleIcon from "@mui/icons-material/CheckCircle"; // Check mark icon
+import CheckCircleIcon from "@mui/icons-material/CheckCircle"; // Green checkmark
 import Header from "../../components/Header";
 import NavigationDrawer from "../../components/NavigationDrawer";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [copied, setCopied] = useState(false); // Track copied state
+  const [emailClicked, setEmailClicked] = useState(false); // Track if the email box was clicked
+  const [openSnackbar, setOpenSnackbar] = useState(false); // Track Snackbar visibility
 
   const toggleDrawer = () => {
     setDrawerOpen(!drawerOpen);
   };
 
-  // Handle copying email to clipboard without popup
-  const handleCopyEmail = async () => {
-    try {
-      await navigator.clipboard.writeText("samnelson7@hotmail.com");
-      setCopied(true); // Set copied to true
-      setTimeout(() => setCopied(false), 1000); // Reset after 1 second
-    } catch (err) {
-      // Handle failure silently, without showing a popup
-    }
+  // Handle email box click, copy email to clipboard, show the green checkmark for 2 seconds
+  const handleEmailClick = () => {
+    const email = "samnelson7@hotmail.com";
+
+    // Copy email to clipboard
+    navigator.clipboard.writeText(email).then(() => {
+      setEmailClicked(true);
+      setOpenSnackbar(true); // Show success notification
+      setTimeout(() => {
+        setEmailClicked(false); // Reset after 2 seconds
+        setOpenSnackbar(false); // Hide success notification
+      }, 2000);
+    }).catch((err) => {
+      console.error("Failed to copy email: ", err);
+    });
   };
 
   return (
@@ -58,13 +64,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   alignItems: "center",
                   justifyContent: "center",
                   padding: 3,
-                  border: "2px solid indigo",
+                  border: "2px solid royalblue",
                   borderRadius: 2,
                   textDecoration: "none",
                   color: "inherit",
                   height: "250px", 
+                  cursor: "pointer", // Make it clickable
                   "&:hover": {
-                    backgroundColor: "indigo",
+                    backgroundColor: "royalblue",
                     color: "white",
                   },
                 }}
@@ -87,13 +94,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   alignItems: "center",
                   justifyContent: "center",
                   padding: 3,
-                  border: "2px solid indigo",
+                  border: "2px solid royalblue",
                   borderRadius: 2,
                   textDecoration: "none",
                   color: "inherit",
                   height: "250px", 
+                  cursor: "pointer", // Make it clickable
                   "&:hover": {
-                    backgroundColor: "indigo",
+                    backgroundColor: "royalblue",
                     color: "white",
                   },
                 }}
@@ -106,62 +114,51 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             {/* Email */}
             <Grid item xs={12} md={4}>
               <Box
-                component="a"
-                href="mailto:sam@hotmail.com"
+                component="div"
+                onClick={handleEmailClick}
                 sx={{
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
                   justifyContent: "center",
                   padding: 3,
-                  border: "2px solid indigo",
+                  border: "2px solid royalblue",
                   borderRadius: 2,
                   textDecoration: "none",
                   color: "inherit",
                   height: "250px", 
-                  "&:hover": {
-                    backgroundColor: "indigo",
+                  cursor: "pointer", // Make it clickable
+                  "&:hover": emailClicked ? undefined : {
+                    backgroundColor: "royalblue",
                     color: "white",
                   },
                 }}
               >
-                <EmailIcon sx={{ fontSize: 48 }} />
-                <Typography variant="h6">Email</Typography>
+                {emailClicked ? (
+                  <CheckCircleIcon sx={{ fontSize: 48, color: "green" }} />
+                ) : (
+                  <>
+                    <EmailIcon sx={{ fontSize: 48 }} />
+                    <Typography variant="h6">Email</Typography>
+                  </>
+                )}
               </Box>
             </Grid>
           </Grid>
-
-          {/* Display Email Text with Copy Feature */}
-          <Box sx={{ mt: 4 }}>
-            <Typography variant="body1">
-              Or, you can reach me via email which I check daily:{" "}
-              <span
-                onClick={handleCopyEmail}
-                style={{
-                  color: "indigo",
-                  textDecoration: "none",
-                  fontWeight: "bold",
-                  cursor: "pointer",
-                }}
-              >
-                samnelson7@hotmail.com
-              </span>
-              <IconButton
-                onClick={handleCopyEmail}
-                sx={{ ml: 1 }}
-                color="inherit"
-                size="small"
-              >
-                {copied ? (
-                  <CheckCircleIcon sx={{ fontSize: 20, color: "green" }} />
-                ) : (
-                  <ContentCopyIcon sx={{ fontSize: 20 }} />
-                )}
-              </IconButton>
-            </Typography>
-          </Box>
         </Box>
       </Container>
+
+      {/* Success Snackbar (Pop-up box) */}
+      <Snackbar
+        open={openSnackbar}
+        autoHideDuration={2000} // Automatically hide after 2 seconds
+        anchorOrigin={{ vertical: "bottom", horizontal: "right" }} // Position at bottom-right
+        onClose={() => setOpenSnackbar(false)}
+      >
+        <Alert onClose={() => setOpenSnackbar(false)} severity="success" sx={{ width: "100%" }}>
+          Email copied successfully!
+        </Alert>
+      </Snackbar>
     </>
   );
 }

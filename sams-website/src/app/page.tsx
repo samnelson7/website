@@ -5,7 +5,7 @@ import { CssBaseline, Container, Typography, Box } from "@mui/material";
 import Header from "../components/Header";
 import NavigationDrawer from "../components/NavigationDrawer";
 
-export default function Layout({ children }: { children: React.ReactNode })  {
+export default function Layout({ children }: { children: React.ReactNode }) {
   const [drawerOpen, setDrawerOpen] = React.useState(false);
 
   const toggleDrawer = () => {
@@ -15,31 +15,67 @@ export default function Layout({ children }: { children: React.ReactNode })  {
   return (
     <>
       <CssBaseline />
-      <Header onDrawerToggle={toggleDrawer} /> {/* Pass the toggleDrawer function as prop */}
-      <NavigationDrawer drawerOpen={drawerOpen} toggleDrawer={toggleDrawer} /> {/* Pass drawerOpen and toggleDrawer as props */}
+      <Header onDrawerToggle={toggleDrawer} />
+      <NavigationDrawer drawerOpen={drawerOpen} toggleDrawer={toggleDrawer} />
 
-      {/* Main Content */}
-      <Container maxWidth={false} sx={{ mt: 4}}>
-        <Box sx={{ width: '100%', padding: 2 }}>
-          <Typography variant="h4" component="h1" gutterBottom>
-            Welcome!
+      {/* Full Image Section with Smooth Fade */}
+      <Box
+        sx={{
+          position: "relative",
+          height: "100vh", // Full viewport height for the image section
+          backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0) 80%, white 100%), url('/images/Ontario3.jpg')`,
+          backgroundSize: "cover", // Ensure the image covers the full container
+          backgroundPosition: "center", // Center the image
+          backgroundRepeat: "no-repeat", // Prevent the image from repeating
+        }}
+      >
+        {/* Welcome Text */}
+        <Box
+          sx={{
+            position: "absolute",
+            top: "50px", // Adjust the top position to 10px from the top of the box
+            left: "5%",
+            color: "white", // Text color set to white
+            textAlign: "left", // Center the text horizontally
+            zIndex: 10, // Ensure the text appears above the image
+          }}
+        >
+          <Typography
+            variant="h2" // Larger font size
+            component="h1"
+            sx={{
+              fontFamily: "'Montserrat', sans-serif", // Font-family of Montserrat
+              fontWeight: 700, // Bold weight
+              textTransform: "uppercase", // Uppercase text
+              letterSpacing: 4, // Increase letter spacing for emphasis
+              textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)", // Subtle text shadow
+            }}
+            gutterBottom
+          >
+            SOFTWARE
+            <br />
+            ENGINEER
           </Typography>
+        </Box>
+      </Box>
+
+      {/* Main Content Section */}
+      <Container
+        maxWidth={false}
+        sx={{
+          padding: 2,
+          backgroundColor: "white", // Ensure white background for the content
+          position: "relative",
+        }}
+      >
+        <Box sx={{ width: "100%" }}>
           <Typography variant="body1">
-            I originally decided to create this website as a portfolio highlighting some of the work and programming that I have done over the 
-            course of my degree, but it has slowly grown into a place for me to practice some of my frontend development skills. In the fall of 
-            2024, I decided with my team to develop a web applicaiton to help patients find nearby emergency rooms that best fit their needs, and 
-            we used a combination of JavaScript, React, Tailwind CSS, Next.js, and various component libraries. So, I decided to use those newly 
-            learned skills to build my website myself while testing out some other tools along the way. The home page focuses more on schooling
-            and work, but if you are curious to learn more about me in general, I have a section all about my interests and recent highlights
-            that you should check out! 
+            s
           </Typography>
-          <br/>
-          <br/>
+          <br />
+          <br />
           <Typography variant="h4" component="h1" gutterBottom>
-           School
-          </Typography>
-          <Typography variant="body1">
-            I originally decided to create this website as a portfolio highlighting some of the work that I have done over the course of my degree, but it has slowly grown into a place for me to practice some of my frontend development skills. In the fall of 2024, I decided with my team to develop a web applicaiton to help patients find nearby emergency rooms that best fit their needs, and we used a combination of JavaScript, React, Tailwind CSS, Next.js, and various component libraries. So, I decided to use those newly learned skills to build my website myself!
+            School
           </Typography>
         </Box>
       </Container>
