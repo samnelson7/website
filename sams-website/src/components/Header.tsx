@@ -60,8 +60,11 @@ const Header: React.FC<HeaderProps> = ({ onDrawerToggle }) => {
         <Box sx={{ display: "flex", alignItems: "center", ml: 4 }}>
           {[
             { text: "Home", to: "/" },
-            { text: "About Me", to: "/about" },
+            { text: "Education", to: "/education" },
+            { text: "Work", to: "/work" },
             { text: "Projects", to: "/projects" },
+            { text: "Technologies and Tools", to: "/techtools" },
+            { text: "Interests", to: "/interests" },
             { text: "Contact", to: "/contact" },
           ].map(({ text, to }, index) => (
             <React.Fragment key={index}>
@@ -78,7 +81,7 @@ const Header: React.FC<HeaderProps> = ({ onDrawerToggle }) => {
                 {text}
               </Button>
               {/* Add a vertical line after each button except the last one */}
-              {index !== 3 && (
+              {index !== 6 && (
                 <Box
                   sx={{
                     width: "1px",
