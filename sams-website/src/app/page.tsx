@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { CssBaseline, Container, Typography, Box } from "@mui/material";
+import { CssBaseline, Typography, Box } from "@mui/material";
 import Header from "../components/Header";
 import NavigationDrawer from "../components/NavigationDrawer";
 
@@ -15,6 +15,16 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <CssBaseline />
+      <style>
+        {`
+          html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Prevent scroll bars */
+          }
+        `}
+      </style>
       <Header onDrawerToggle={toggleDrawer} />
       <NavigationDrawer drawerOpen={drawerOpen} toggleDrawer={toggleDrawer} />
 
@@ -79,25 +89,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </Typography>
         </Box>
       </Box>
-
-      {/* Main Content Section
-      <Container
-        maxWidth={false}
-        sx={{
-          padding: 2,
-          backgroundColor: "white", // Ensure white background for the content
-          position: "relative",
-        }}
-      >
-        <Box sx={{ width: "100%" }}>
-          <Typography variant="body1">Some text</Typography>
-          <br />
-          <br />
-          <Typography variant="h4" component="h1" gutterBottom>
-            School
-          </Typography>
-        </Box>
-      </Container> */}
     </>
   );
 }

@@ -44,7 +44,7 @@ const Header: React.FC<HeaderProps> = ({ onDrawerToggle }) => {
   };
 
   return (
-    <AppBar position="static" sx={{ bgcolor: "#1c375d" }}>
+    <AppBar position="sticky" sx={{ bgcolor: "#1c375d" }}>
       <Toolbar sx={{ display: "flex", alignItems: "center" }}>
         {/* Mobile Drawer Toggle */}
         <IconButton color="inherit" edge="start" onClick={onDrawerToggle} sx={{ display: { md: "none" } }}>
@@ -58,7 +58,7 @@ const Header: React.FC<HeaderProps> = ({ onDrawerToggle }) => {
 
         {/* Navigation Links */}
         <Box sx={{ display: "flex", alignItems: "center", ml: 4 }}>
-          {[
+          {[ 
             { text: "Home", to: "/" },
             { text: "Education", to: "/education" },
             { text: "Work", to: "/work" },
