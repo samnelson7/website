@@ -23,6 +23,13 @@ const Header: React.FC<HeaderProps> = ({ onDrawerToggle }) => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [copied, setCopied] = React.useState(false);
   const [openSnackbar, setOpenSnackbar] = React.useState(false);
+  const [currentPath, setCurrentPath] = React.useState("");
+
+  React.useEffect(() => {
+    if (typeof window !== "undefined") {
+      setCurrentPath(window.location.pathname); // Fallback to window.location
+    }
+  }, []);
 
   const handleMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -58,7 +65,7 @@ const Header: React.FC<HeaderProps> = ({ onDrawerToggle }) => {
 
         {/* Navigation Links */}
         <Box sx={{ display: "flex", alignItems: "center", ml: 4 }}>
-          {[ 
+          {[
             { text: "Home", to: "/" },
             { text: "Education", to: "/education" },
             { text: "Work", to: "/work" },
@@ -74,8 +81,13 @@ const Header: React.FC<HeaderProps> = ({ onDrawerToggle }) => {
                 sx={{
                   color: "white",
                   textTransform: "none",
-                  "&:hover": { color: "lightgray" },
-                  padding: "6px 12px", // Optional: adjusts padding for a consistent button size
+                  padding: "6px 12px",
+                  backgroundColor: currentPath === to ? "rgba(255, 255, 255, 0.2)" : "transparent",
+                  borderRadius: "5px",
+                  "&:hover": {
+                    color: "lightgray",
+                    backgroundColor: currentPath === to ? "rgba(255, 255, 255, 0.2)" : "rgba(255, 255, 255, 0.1)",
+                  },
                 }}
               >
                 {text}
