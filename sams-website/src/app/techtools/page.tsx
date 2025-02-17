@@ -37,6 +37,7 @@ export default function TechToolsPage() {
       { name: "Next.js", icon: <img src="/images/Next.png" alt="Next.js Logo" style={{ width: 50, height: 50 }} /> },
       { name: "React", icon: <img src="/images/React.png" alt="React Logo" style={{ width: 50, height: 50 }} /> },
       { name: "Spring", icon: <img src="/images/Spring.png" alt="Spring Logo" style={{ width: 50, height: 50 }} /> },
+      { name: "WPF", icon: <img src="/images/wpf.svg" alt="WPF Logo" style={{ width: 50, height: 50 }} /> },
       { name: "Tailwind", icon: <img src="/images/Tailwind.png" alt="Tailwind Logo" style={{ width: 50, height: 30 }} /> },
     ],
     "DevOps & Other Tools": [

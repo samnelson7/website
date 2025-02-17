@@ -64,7 +64,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               ▪ Highly motivated student with a 90% GPA
             </Typography>
             <Typography variant="body2" gutterBottom>
-              ▪ Performed <Link href="/projects">joint research</Link> on generating automated feedback to improve student outcomes
+              ▪ Performed joint research on generating automated feedback to improve student outcomes
             </Typography>
             <hr style={{ margin: "20px 0", borderColor: "#ccc" }} />
           </Box>
@@ -118,14 +118,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   UVic Excellence Scholarship
 </Typography>
 <Typography variant="body2" gutterBottom sx={{ marginBottom: 2 }}>
-  ▪ Earned and maintained throughout the degree based on a high GPA
+  ▪ Retained and upheld throughout degree based on a high GPA
 </Typography>
 
 <Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
   Faculty of Engineering and Computer Science: Dean's Entrance Scholarship
 </Typography>
 <Typography variant="body2" gutterBottom sx={{ marginBottom: 2 }}>
-  ▪ Awarded for exceptional academic achievement upon entering first year at UVic
+  ▪ Won based on exceptional academic achievement upon entering first year at UVic
 </Typography>
 
 <Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
@@ -139,14 +139,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   District/Authority Scholarship
 </Typography>
 <Typography variant="body2" gutterBottom sx={{ marginBottom: 2 }}>
-  ▪ Awarded for excellence in Physical Activity and Health, with recognition for volunteering, coaching, and active involvement in school and community sports programs
+  ▪ Obtained for excellence in Physical Activity and Health, with recognition for volunteering, coaching, and active involvement in school and community sports programs
 </Typography>
 
 <Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
   Ridge Meadows Soccer Club Scholarship
 </Typography>
 <Typography variant="body2" gutterBottom sx={{ marginBottom: 2 }}>
-  ▪ Awarded for volunteer coaching and playing contributions
+  ▪ Granted for volunteer coaching, playing contributions, and references
 </Typography>
 
 <Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
