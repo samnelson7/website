@@ -9,7 +9,7 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle"; // Green checkmar
 import Header from "../../components/Header";
 import NavigationDrawer from "../../components/NavigationDrawer";
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [emailClicked, setEmailClicked] = useState(false); // Track if the email box was clicked
   const [openSnackbar, setOpenSnackbar] = useState(false); // Track Snackbar visibility
@@ -68,7 +68,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   borderRadius: 2,
                   textDecoration: "none",
                   color: "inherit",
-                  height: "250px", 
+                  height: "250px",
                   cursor: "pointer", // Make it clickable
                   "&:hover": {
                     backgroundColor: "#1c375d",
@@ -98,7 +98,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   borderRadius: 2,
                   textDecoration: "none",
                   color: "inherit",
-                  height: "250px", 
+                  height: "250px",
                   cursor: "pointer", // Make it clickable
                   "&:hover": {
                     backgroundColor: "#1c375d",
@@ -126,7 +126,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   borderRadius: 2,
                   textDecoration: "none",
                   color: "inherit",
-                  height: "250px", 
+                  height: "250px",
                   cursor: "pointer", // Make it clickable
                   "&:hover": emailClicked ? undefined : {
                     backgroundColor: "#1c375d",
