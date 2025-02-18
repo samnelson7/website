@@ -1,10 +1,9 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { CssBaseline, Box, Typography, Modal, IconButton, Collapse, Link } from "@mui/material";
+import { CssBaseline, Box, Typography, Modal, IconButton, Link } from "@mui/material";
 import ZoomInIcon from "@mui/icons-material/ZoomIn";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import Header from "../../components/Header";
 import NavigationDrawer from "../../components/NavigationDrawer";
 import CloseIcon from "@mui/icons-material/Close";
@@ -69,12 +68,11 @@ const projects: Project[] = [
   },
 ];
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout({  }: { children: React.ReactNode }) {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [open, setOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [expandedProject, setExpandedProject] = useState<string | null>(null);
-  const [expandTechnologies, setExpandTechnologies] = useState(false);
 
   const toggleDrawer = () => {
     setDrawerOpen(!drawerOpen);
@@ -93,14 +91,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const toggleProjectExpansion = (title: string) => {
     if (expandedProject === title) {
       setExpandedProject(null);
-      setExpandTechnologies(false);
     } else {
       setExpandedProject(title);
-      // Wait for the description to expand, then trigger the technologies expansion
-      setExpandTechnologies(false);
-      setTimeout(() => {
-        setExpandTechnologies(true);
-      }, 300); // You can adjust the delay for the technologies expansion
     }
   };
 
