@@ -5,7 +5,8 @@ import { CssBaseline, Typography, Box } from "@mui/material";
 import Header from "../components/Header";
 import NavigationDrawer from "../components/NavigationDrawer";
 
-export default function Layout({}: { children: React.ReactNode }) {
+// Use React.FC to type the Layout component correctly
+const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [drawerOpen, setDrawerOpen] = React.useState(false);
 
   const toggleDrawer = () => {
@@ -89,6 +90,11 @@ export default function Layout({}: { children: React.ReactNode }) {
           </Typography>
         </Box>
       </Box>
+
+      {/* Render the children */}
+      {children}
     </>
   );
-}
+};
+
+export default Layout;
