@@ -116,7 +116,7 @@ const Header: React.FC<HeaderProps> = ({ onDrawerToggle }) => {
               transition: "all 0.3s ease",
             }}
           >
-            <Avatar alt="Sam Nelson" src="/images/profile.jpg" sx={{ width: 50, height: 50 }} />
+            <Avatar alt="Sam Nelson" src="/images/profile.JPG" sx={{ width: 50, height: 50 }} />
           </IconButton>
         </Box>
 
