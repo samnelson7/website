@@ -33,7 +33,7 @@ export default function TechToolsPage() {
       { name: "SQLite", icon: <Image src="/images/SQLite.png" alt="SQLite Logo" width={50} height={50} /> },
     ],
     Frameworks: [
-      { name: ".NET", icon: <Image src="/images/NET.png" alt=".NET Logo" width={50} height={50} /> },
+      { name: ".NET", icon: <Image src="/images/net.png" alt=".NET Logo" width={50} height={50} /> },
       { name: "CSS", icon: <Image src="/images/CSS.png" alt="CSS Logo" width={50} height={50} /> },
       { name: "Next.js", icon: <Image src="/images/Next.png" alt="Next.js Logo" width={50} height={50} /> },
       { name: "React", icon: <Image src="/images/React.png" alt="React Logo" width={50} height={50} /> },
