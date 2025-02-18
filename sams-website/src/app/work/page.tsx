@@ -1,11 +1,15 @@
-"use client";
+"use client"
 
 import React, { useState } from "react";
 import { CssBaseline, Container, Typography, Box, Link } from "@mui/material";
 import Header from "../../components/Header";
 import NavigationDrawer from "../../components/NavigationDrawer";
 
-export default function Layout({  }: { children: React.ReactNode }) {
+interface LayoutProps {
+  children: React.ReactNode;
+}
+
+export default function Layout({  }: LayoutProps) {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const toggleDrawer = () => {
@@ -50,8 +54,8 @@ export default function Layout({  }: { children: React.ReactNode }) {
             minHeight: "100%",
           }}
         >
+          {/* All your content goes here */}
           <Box>
-
             <Typography variant="h5" component="h1" gutterBottom>
               Tekla API Developer
             </Typography>
@@ -59,10 +63,10 @@ export default function Layout({  }: { children: React.ReactNode }) {
               Exact Detailing, Victoria, May 2024 - Aug 2024
             </Typography>
             <Typography variant="body2" component="h1" gutterBottom>
-            ▪ Co-developed the <Link href="/projects">WAVTool</Link> (Weld Access Verification Tool), a collaboration with AGT Robotics, enabling users to visualize the accessibility of welds for robotic welders, now available on Tekla Warehouse
+              ▪ Co-developed the <Link href="/projects">WAVTool</Link> (Weld Access Verification Tool), a collaboration with AGT Robotics, enabling users to visualize the accessibility of welds for robotic welders, now available on Tekla Warehouse
             </Typography>
             <Typography variant="body2" component="h1" gutterBottom>
-            ▪ Led development on the Clash Checker, a plugin to streamline the management of clashing steel parts, enabling task assignment and tracking which facilitated easier collaboration
+              ▪ Led development on the Clash Checker, a plugin to streamline the management of clashing steel parts, enabling task assignment and tracking which facilitated easier collaboration
             </Typography>
             <Typography variant="body2" gutterBottom sx={{ maxWidth: "80%", wordWrap: "break-word" }}>
               ▪ Collaborated with industry professionals to identify business objectives and design solutions that directly addressed productivity challenges
