@@ -164,7 +164,7 @@ export default function Layout({  }: { children: React.ReactNode }) {
           of the work and ongoings of various departments from a single place. We developed an entire prototype for a web-based platform
           combining their data analytics and platforms as well as suggesting how to implement it with various APIs.
           <br />
-          You can take a look at the complete requirements document as well as some of the prototype's features at the bottom of it{" "}
+          You can take a look at the complete requirements document as well as some of the prototype&#39;s features at the bottom of it{" "}
           <Link href="https://github.com/samnelson7/Requirements-Engineering/blob/main/RD.md">
             here
           </Link>.

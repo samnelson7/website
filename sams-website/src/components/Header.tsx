@@ -21,7 +21,6 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ onDrawerToggle }) => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const [copied, setCopied] = React.useState(false);
   const [openSnackbar, setOpenSnackbar] = React.useState(false);
   const [currentPath, setCurrentPath] = React.useState("");
 
@@ -42,7 +41,6 @@ const Header: React.FC<HeaderProps> = ({ onDrawerToggle }) => {
   const handleCopyEmail = async () => {
     try {
       await navigator.clipboard.writeText("samnelson7@hotmail.com");
-      setCopied(true);
       setOpenSnackbar(true); // Show Snackbar when email is copied
       setTimeout(() => setOpenSnackbar(false), 3000); // Hide Snackbar after 3 seconds
     } catch (err) {

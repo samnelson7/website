@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import { CssBaseline, Container, Typography, Box, ListItem, List, Grid, Link } from "@mui/material";
+import { CssBaseline, Container, Typography, Box, Link } from "@mui/material";
 import Header from "../../components/Header";
 import NavigationDrawer from "../../components/NavigationDrawer";
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout({  }: { children: React.ReactNode }) {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const toggleDrawer = () => {
