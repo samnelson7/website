@@ -5,7 +5,7 @@ import { CssBaseline, Container, Typography, Box } from "@mui/material";
 import Header from "../../components/Header";
 import NavigationDrawer from "../../components/NavigationDrawer";
 
-export default function Layout({ children }: { children: React.ReactNode })  {
+export default function Layout({}: { children: React.ReactNode })  {
   const [drawerOpen, setDrawerOpen] = React.useState(false);
 
   const toggleDrawer = () => {
@@ -22,10 +22,10 @@ export default function Layout({ children }: { children: React.ReactNode })  {
       <Container maxWidth={false} sx={{ mt: 4}}>
       <Box sx={{ width: '100%', padding: 2 }}>
         <Typography variant="h4" component="h1" gutterBottom>
-          About Me
+          Interests
         </Typography>
         <Typography variant="body1">
-          This is the about page. Here you can learn more about me and my background.
+          I have no interests get outta here buddy
         </Typography>
       </Box>
       </Container>

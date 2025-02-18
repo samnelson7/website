@@ -5,7 +5,7 @@ import { CssBaseline, Container, Typography, Box, Grid, Link } from "@mui/materi
 import Header from "../../components/Header";
 import NavigationDrawer from "../../components/NavigationDrawer";
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout() {  // Removed `children` prop here
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const toggleDrawer = () => {
@@ -107,55 +107,53 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </Typography>
 
             <Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
-  Valerie Kuehne Undergraduate Research Award
-</Typography>
-<Typography variant="body2" gutterBottom sx={{ marginBottom: 2 }}>
-  ▪ Awarded for academic achievements and a proposal for joint research
-  which led to the development of an <Link href="/projects">innovative software solution</Link> through the grant to create automated feedback responses based on diverse student inputs
-</Typography>
+              Valerie Kuehne Undergraduate Research Award
+            </Typography>
+            <Typography variant="body2" gutterBottom sx={{ marginBottom: 2 }}>
+              ▪ Awarded for academic achievements and a proposal for joint research which led to the development of an <Link href="/projects">innovative software solution</Link> through the grant to create automated feedback responses based on diverse student inputs
+            </Typography>
 
-<Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
-  UVic Excellence Scholarship
-</Typography>
-<Typography variant="body2" gutterBottom sx={{ marginBottom: 2 }}>
-  ▪ Retained and upheld throughout degree based on a high GPA
-</Typography>
+            <Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
+              UVic Excellence Scholarship
+            </Typography>
+            <Typography variant="body2" gutterBottom sx={{ marginBottom: 2 }}>
+              ▪ Retained and upheld throughout degree based on a high GPA
+            </Typography>
 
-<Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
-  Faculty of Engineering and Computer Science: Dean's Entrance Scholarship
-</Typography>
-<Typography variant="body2" gutterBottom sx={{ marginBottom: 2 }}>
-  ▪ Won based on exceptional academic achievement upon entering first year at UVic
-</Typography>
+            <Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
+              Faculty of Engineering and Computer Science: Dean&apos;s Entrance Scholarship
+            </Typography>
+            <Typography variant="body2" gutterBottom sx={{ marginBottom: 2 }}>
+              ▪ Won based on exceptional academic achievement upon entering first year at UVic
+            </Typography>
 
-<Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
-  Major W. Horan Memorial Scholarship
-</Typography>
-<Typography variant="body2" gutterBottom sx={{ marginBottom: 2 }}>
-  ▪ Received for academic excellence upon entering first year at UVic
-</Typography>
+            <Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
+              Major W. Horan Memorial Scholarship
+            </Typography>
+            <Typography variant="body2" gutterBottom sx={{ marginBottom: 2 }}>
+              ▪ Received for academic excellence upon entering first year at UVic
+            </Typography>
 
-<Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
-  District/Authority Scholarship
-</Typography>
-<Typography variant="body2" gutterBottom sx={{ marginBottom: 2 }}>
-  ▪ Obtained for excellence in Physical Activity and Health, with recognition for volunteering, coaching, and active involvement in school and community sports programs
-</Typography>
+            <Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
+              District/Authority Scholarship
+            </Typography>
+            <Typography variant="body2" gutterBottom sx={{ marginBottom: 2 }}>
+              ▪ Obtained for excellence in Physical Activity and Health, with recognition for volunteering, coaching, and active involvement in school and community sports programs
+            </Typography>
 
-<Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
-  Ridge Meadows Soccer Club Scholarship
-</Typography>
-<Typography variant="body2" gutterBottom sx={{ marginBottom: 2 }}>
-  ▪ Granted for volunteer coaching, playing contributions, and references
-</Typography>
+            <Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
+              Ridge Meadows Soccer Club Scholarship
+            </Typography>
+            <Typography variant="body2" gutterBottom sx={{ marginBottom: 2 }}>
+              ▪ Granted for volunteer coaching, playing contributions, and references
+            </Typography>
 
-<Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
-  Top Science/French Student
-</Typography>
-<Typography variant="body2" gutterBottom sx={{ marginBottom: 2 }}>
-  ▪ Earned in high school for highest grades in Biology, Chemistry, 
-  and Physics combined, and in the French immersion program in a graduating class of 200
-</Typography>
+            <Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
+              Top Science/French Student
+            </Typography>
+            <Typography variant="body2" gutterBottom sx={{ marginBottom: 2 }}>
+              ▪ Earned in high school for highest grades in Biology, Chemistry, and Physics combined, and in the French immersion program in a graduating class of 200
+            </Typography>
 
           </Box>
         </Container>
