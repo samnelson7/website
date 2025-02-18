@@ -68,7 +68,7 @@ const projects: Project[] = [
   },
 ];
 
-export default function Layout({  }: { children: React.ReactNode }) {
+export default function ProjectsPage() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [open, setOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);

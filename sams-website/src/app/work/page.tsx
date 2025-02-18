@@ -5,11 +5,7 @@ import { CssBaseline, Container, Typography, Box, Link } from "@mui/material";
 import Header from "../../components/Header";
 import NavigationDrawer from "../../components/NavigationDrawer";
 
-interface LayoutProps {
-  children: React.ReactNode;
-}
-
-export default function Layout({  }: LayoutProps) {
+export default function Page() {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const toggleDrawer = () => {
