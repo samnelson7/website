@@ -79,11 +79,9 @@ const Page = () => {
               textShadow: "1px 1px 2px rgba(0, 0, 0, 0.7)",
               maxWidth: "40%",
             }}
+            // add text below
           >
-            Driven by a passion for programming, I am dedicated to continuously learning and exploring new technologies. 
-            With experience in creating intuitive designs to enhance the user experience, rigorously testing software 
-            to meet stakeholder needs, and solving problems through collaboration, 
-            I take pride in crafting scalable and maintainable solutions to complex problems. 
+            
           </Typography>
         </Box>
       </Box>
