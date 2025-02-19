@@ -63,15 +63,26 @@ export default function TechToolsPage() {
           mt: 0,
           display: "flex",
           justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column", // Adjust for smaller screens
           backgroundImage: "url(/images/Techbg.avif)",
-          backgroundRepeat: "no-repeat", // Prevent repeating the image
-          backgroundSize: "cover", // Ensure the background covers the entire container
-          backgroundPosition: "center", // Center the background image
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
           color: "white",
-          minHeight: "100vh", // Ensure the container takes at least full viewport height
+          minHeight: "100vh",
+          width: "100vw", // Ensure it takes full width
+          padding: { xs: 2, md: 6 }, // Adjust padding based on screen size
         }}
       >
-        <Box sx={{ width: "50%", padding: 2 }}>
+
+        <Box // use full width on mobile
+          sx={{
+            width: { xs: "100%", md: "60%" }, 
+            padding: 2,
+          }}
+        >
+
           <Typography variant="h4" component="h1" gutterBottom>
             Technology and Tools
           </Typography>

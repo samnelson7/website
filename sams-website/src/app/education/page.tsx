@@ -1,12 +1,17 @@
 "use client";
 
 import React, { useState } from "react";
-import { CssBaseline, Container, Typography, Box, Grid, Link } from "@mui/material";
+import { CssBaseline, Container, Typography, Box, Grid, Link, useMediaQuery } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 import Header from "../../components/Header";
 import NavigationDrawer from "../../components/NavigationDrawer";
 
 export default function Layout() {  // Removed `children` prop here
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const theme = useTheme();
+  
+  // Replace 'md' with whatever breakpoint your Header collapses at
+  const isMobile = useMediaQuery(theme.breakpoints.down("md")); 
 
   const toggleDrawer = () => {
     setDrawerOpen(!drawerOpen);
@@ -29,14 +34,16 @@ export default function Layout() {  // Removed `children` prop here
           overflowY: "auto",
         }}
       >
-        {/* Left Sidebar */}
-        <Box
-          sx={{
-            width: "20%",
-            backgroundColor: "#1c375d",
-            minHeight: "100vh",
-          }}
-        />
+        {/* Left Sidebar (Hidden on Small Screens) */}
+                {!isMobile && (
+                  <Box
+                    sx={{
+                      width: "20%",
+                      backgroundColor: "#1c375d",
+                      minHeight: "100vh",
+                    }}
+                  />
+                )}
 
         {/* Main Content Area (Centered) */}
         <Container
@@ -158,14 +165,16 @@ export default function Layout() {  // Removed `children` prop here
           </Box>
         </Container>
 
-        {/* Right Sidebar */}
-        <Box
-          sx={{
-            width: "20%",
-            backgroundColor: "#1c375d",
-            minHeight: "100vh",
-          }}
-        />
+        {/* Right Sidebar (Hidden on Small Screens) */}
+                {!isMobile && (
+                  <Box
+                    sx={{
+                      width: "20%",
+                      backgroundColor: "#1c375d",
+                      minHeight: "100vh",
+                    }}
+                  />
+                )}
       </Box>
     </>
   );

@@ -1,12 +1,17 @@
-"use client"
+"use client";
 
 import React, { useState } from "react";
-import { CssBaseline, Container, Typography, Box, Link } from "@mui/material";
+import { CssBaseline, Container, Typography, Box, Link, useMediaQuery } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 import Header from "../../components/Header";
 import NavigationDrawer from "../../components/NavigationDrawer";
 
 export default function Page() {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const theme = useTheme();
+  
+  // Replace 'md' with whatever breakpoint your Header collapses at
+  const isMobile = useMediaQuery(theme.breakpoints.down("md")); 
 
   const toggleDrawer = () => {
     setDrawerOpen(!drawerOpen);
@@ -29,16 +34,18 @@ export default function Page() {
           overflowY: "auto",
         }}
       >
-        {/* Left Sidebar */}
-        <Box
-          sx={{
-            width: "20%",
-            backgroundColor: "#1c375d",
-            minHeight: "100vh",
-          }}
-        />
+        {/* Left Sidebar (Hidden on Small Screens) */}
+        {!isMobile && (
+          <Box
+            sx={{
+              width: "20%",
+              backgroundColor: "#1c375d",
+              minHeight: "100vh",
+            }}
+          />
+        )}
 
-        {/* Main Content Area (Centered) */}
+        {/* Main Content Area */}
         <Container
           maxWidth="md"
           sx={{
@@ -52,7 +59,7 @@ export default function Page() {
         >
           {/* All your content goes here */}
           <Box>
-            <Typography variant="h5" component="h1" gutterBottom>
+          <Typography variant="h5" component="h1" gutterBottom>
               Tekla API Developer
             </Typography>
             <Typography variant="h6" component="h1" gutterBottom>
@@ -125,14 +132,16 @@ export default function Page() {
           </Box>
         </Container>
 
-        {/* Right Sidebar */}
-        <Box
-          sx={{
-            width: "20%",
-            backgroundColor: "#1c375d",
-            minHeight: "100vh",
-          }}
-        />
+        {/* Right Sidebar (Hidden on Small Screens) */}
+        {!isMobile && (
+          <Box
+            sx={{
+              width: "20%",
+              backgroundColor: "#1c375d",
+              minHeight: "100vh",
+            }}
+          />
+        )}
       </Box>
     </>
   );

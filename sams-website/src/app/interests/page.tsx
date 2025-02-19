@@ -114,7 +114,7 @@ export default function ProjectsPage() {
   return (
     <>
       <CssBaseline />
-      <Header />
+      <Header/>
       <NavigationDrawer drawerOpen={drawerOpen} toggleDrawer={toggleDrawer} />
 
       <Box sx={{ display: "flex", width: "100%" }}>
@@ -127,10 +127,11 @@ export default function ProjectsPage() {
             top: 0,
             left: 0,
             zIndex: 1,
+            display: { xs: "none", md: "block" }, // Hide on small screens
           }}
         />
 
-        <Box sx={{ flex: 1, marginLeft: "10%", marginRight: "10%" }}>
+          <Box sx={{ flex: 1, marginLeft: { xs: "0%", md: "10%" }, marginRight: { xs: "0%", md: "10%" } }}>
           {projects.map((project, index) => (
             <Box key={project.title}>
               <Box
@@ -265,6 +266,7 @@ export default function ProjectsPage() {
             top: 0,
             right: 0,
             zIndex: 1,
+            display: { xs: "none", md: "block" },
           }}
         />
       </Box>
