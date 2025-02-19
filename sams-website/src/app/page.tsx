@@ -25,7 +25,7 @@ const Page = () => {
           }
         `}
       </style>
-      <Header onDrawerToggle={toggleDrawer} />
+      <Header />
       <NavigationDrawer drawerOpen={drawerOpen} toggleDrawer={toggleDrawer} />
 
       {/* Full Image Section with Smooth Fade */}

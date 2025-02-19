@@ -38,7 +38,7 @@ export default function Layout() {
   return (
     <>
       <CssBaseline />
-      <Header onDrawerToggle={toggleDrawer} />
+      <Header/>
       <NavigationDrawer drawerOpen={drawerOpen} toggleDrawer={toggleDrawer} />
 
       <Container maxWidth={false} sx={{ mt: 4 }}>

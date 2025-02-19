@@ -54,7 +54,7 @@ export default function TechToolsPage() {
   return (
     <>
       <CssBaseline />
-      <Header onDrawerToggle={toggleDrawer} />
+      <Header  />
       <NavigationDrawer drawerOpen={drawerOpen} toggleDrawer={toggleDrawer} />
 
       <Container
