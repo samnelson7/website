@@ -88,24 +88,28 @@ const Header: React.FC = () => {
 
         <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center", ml: 4 }}>
           {navLinks.map(({ text, to }, index) => (
-            <Button
-              key={index}
-              component={Link}
-              href={to}
-              sx={{
-                color: "white",
-                textTransform: "none",
-                padding: "6px 12px",
-                backgroundColor: currentPath === to ? "rgba(255, 255, 255, 0.2)" : "transparent",
-                borderRadius: "5px",
-                "&:hover": {
-                  color: "lightgray",
-                  backgroundColor: currentPath === to ? "rgba(255, 255, 255, 0.2)" : "rgba(255, 255, 255, 0.1)",
-                },
-              }}
-            >
-              {text}
-            </Button>
+            <React.Fragment key={index}>
+              <Button
+                component={Link}
+                href={to}
+                sx={{
+                  color: "white",
+                  textTransform: "none",
+                  padding: "6px 12px",
+                  backgroundColor: currentPath === to ? "rgba(255, 255, 255, 0.2)" : "transparent",
+                  borderRadius: "5px",
+                  "&:hover": {
+                    color: "lightgray",
+                    backgroundColor: currentPath === to ? "rgba(255, 255, 255, 0.2)" : "rgba(255, 255, 255, 0.1)",
+                  },
+                }}
+              >
+                {text}
+              </Button>
+              {index !== navLinks.length - 1 && (
+                <Box sx={{ width: "1px", height: "30px", backgroundColor: "grey", marginLeft: 2, marginRight: 2 }} />
+              )}
+            </React.Fragment>
           ))}
         </Box>
 
@@ -130,7 +134,7 @@ const Header: React.FC = () => {
         </Menu>
       </Toolbar>
 
-      <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
+      <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)} disableScrollLock>
         <List>
           {navLinks.map(({ text, to, icon }, index) => (
             <ListItem key={index} disablePadding>
