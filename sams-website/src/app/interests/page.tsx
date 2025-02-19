@@ -132,6 +132,11 @@ export default function ProjectsPage() {
         />
 
           <Box sx={{ flex: 1, marginLeft: { xs: "0%", md: "10%" }, marginRight: { xs: "0%", md: "10%" } }}>
+          <Typography variant="h4" component="h1" gutterBottom sx={{ marginLeft: "20px", marginTop: "20px" }}>
+            Interests
+          </Typography>
+          <hr style={{ margin: "20px 0", borderColor: "#ccc" }} />
+
           {projects.map((project, index) => (
             <Box key={project.title}>
               <Box

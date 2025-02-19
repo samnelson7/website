@@ -59,6 +59,12 @@ export default function Page() {
         >
           {/* All your content goes here */}
           <Box>
+          <Typography variant="h4" component="h1" gutterBottom>
+            Work Experience
+          </Typography>
+          
+          <hr style={{ margin: "20px 0", borderColor: "#ccc" }} />
+
           <Typography variant="h5" component="h1" gutterBottom>
               Tekla API Developer
             </Typography>
