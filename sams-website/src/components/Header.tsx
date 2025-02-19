@@ -122,11 +122,13 @@ const Header: React.FC<HeaderProps> = ({ onDrawerToggle }) => {
 
         {/* Dropdown Menu */}
         <Menu
-          anchorEl={anchorEl}
-          open={Boolean(anchorEl)}
-          onClose={handleMenuClose}
-          MenuListProps={{ "aria-labelledby": "basic-button" }}
-        >
+  anchorEl={anchorEl}
+  open={Boolean(anchorEl)}
+  onClose={handleMenuClose}
+  MenuListProps={{ "aria-labelledby": "basic-button" }}
+  disableScrollLock={true} // Prevents layout shift when the menu is opened
+>
+
           {/* Email Menu Item */}
           <MenuItem
             onClick={() => {
