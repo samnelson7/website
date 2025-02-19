@@ -114,7 +114,7 @@ export default function ProjectsPage() {
   return (
     <>
       <CssBaseline />
-      <Header onDrawerToggle={toggleDrawer} />
+      <Header/>
       <NavigationDrawer drawerOpen={drawerOpen} toggleDrawer={toggleDrawer} />
 
       <Box sx={{ display: "flex", width: "100%" }}>

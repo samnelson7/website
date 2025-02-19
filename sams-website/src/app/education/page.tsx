@@ -15,7 +15,7 @@ export default function Layout() {  // Removed `children` prop here
   return (
     <>
       <CssBaseline />
-      <Header onDrawerToggle={toggleDrawer} />
+      <Header/>
       <NavigationDrawer drawerOpen={drawerOpen} toggleDrawer={toggleDrawer} />
 
       <Box
