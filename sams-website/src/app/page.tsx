@@ -39,7 +39,7 @@ const Page = () => {
     @media (max-width: 768px) {
       /* Adjust for mobile screens */
       .image-section {
-        background-position: right center; /* Shift the image to the left of center */
+        background-position: 80% center; /* Shift the image to the left of center */
       }
     }
 
