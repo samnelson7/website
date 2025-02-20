@@ -39,7 +39,7 @@ const Page = () => {
     @media (max-width: 768px) {
       /* Adjust for mobile screens */
       .image-section {
-        background-position: 80% center; /* Shift the image to the left of center */
+        background-position: 60% center; /* Shift the image to the left of center */
       }
     }
 
@@ -105,14 +105,28 @@ const Page = () => {
               mt: 2,
               color: "white",
               textShadow: "1px 1px 2px rgba(0, 0, 0, 0.7)",
-              maxWidth: { xs: "100%", md: "40%" },
+              maxWidth: { xs: "70%", md: "40%" },
               padding: { xs: 2, md: 0 },
             }}
           >
             Passionate about building efficient and innovative software solutions.
             Experienced in a range of programming languages, frameworks, and DevOps tools. Check out my projects, work experience, or interests to learn more about me!
             <br />
-            <br />
+          </Typography>
+          <Typography
+            variant="body1"
+            component="p"
+            sx={{
+              fontFamily: "'Roboto', sans-serif",
+              fontSize: "18px",
+              lineHeight: 1.8,
+              mt: 2,
+              color: "white",
+              textShadow: "1px 1px 2px rgba(0, 0, 0, 0.7)",
+              maxWidth: { xs: "100%", md: "40%" },
+              padding: { xs: 2, md: 0 },
+            }}
+          >
             <strong>Want to see all of the tools I have used and languages I know? Visit <Link href="/techtools">technologies and tools</Link> for more! </strong>
             <br />
             <strong>Languages:</strong> C, C#, Java, JavaScript, TypeScript, Python, Perl, R, and more.
