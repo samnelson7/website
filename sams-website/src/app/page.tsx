@@ -16,44 +16,51 @@ const Page = () => {
     <>
       <CssBaseline />
       <style>
-        {`
-          html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            background-color: #1c375d; /* Blue background behind image */
-            overflow-x: hidden; /* Prevent horizontal scrolling */
-            overflow-y: auto; /* Allow vertical scrolling when necessary */
-          }
+  {`
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #1c375d; /* Blue background behind image */
+      overflow-x: hidden; /* Prevent horizontal scrolling */
+      overflow-y: auto; /* Allow vertical scrolling when necessary */
+    }
 
-          /* Ensure the full viewport is used for the image section */
-          .image-section {
-            position: relative;
-            height: 100vh; /* Full viewport height for the image section */
-            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 80%, #1c375d 100%), url('/images/Ontario3.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-          }
+    /* Ensure the full viewport is used for the image section */
+    .image-section {
+      position: relative;
+      height: 100vh; /* Full viewport height for the image section */
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 80%, #1c375d 100%), url('/images/Ontario3.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
 
-          .content-wrapper {
-            background-color: #1c375d; /* Blue background */
-            color: white;
-            padding: 20px;
-            padding-top: 20px; /* Some padding on top to keep the content aligned */
-            /* Removed min-height to avoid unnecessary scroll space */
-            padding-bottom: 20px; /* Padding to ensure space at the bottom */
-          }
+    @media (max-width: 768px) {
+      /* Adjust for mobile screens */
+      .image-section {
+        background-position: right center; /* Shift the image to the left of center */
+      }
+    }
 
-          .languages-info {
-            margin-top: 20px;
-          }
+    .content-wrapper {
+      background-color: #1c375d; /* Blue background */
+      color: white;
+      padding: 20px;
+      padding-top: 20px; /* Some padding on top to keep the content aligned */
+      padding-bottom: 20px; /* Padding to ensure space at the bottom */
+    }
 
-          .frameworks-info {
-            margin-top: 20px;
-          }
-        `}
-      </style>
+    .languages-info {
+      margin-top: 20px;
+    }
+
+    .frameworks-info {
+      margin-top: 20px;
+    }
+  `}
+</style>
+
 
       <Header />
       <NavigationDrawer drawerOpen={drawerOpen} toggleDrawer={toggleDrawer} />
