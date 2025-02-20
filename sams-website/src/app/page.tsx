@@ -110,7 +110,7 @@ const Page = () => {
             }}
           >
             Passionate about building efficient and innovative software solutions.
-            Experienced in a range of programming languages, frameworks, and DevOps tools. Check out my projects, work experience, or interests to learn more about me!
+            Experienced in a range of programming languages, frameworks, and DevOps tools. Check out my <Link href="/projects">projects</Link>, <Link href="/work">work experience</Link>, or <Link href="/interests">interests</Link> to learn more about me!
             <br />
           </Typography>
           <Typography
