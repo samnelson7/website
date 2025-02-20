@@ -1,7 +1,7 @@
-"use client";
+"use client"
 
 import React from "react";
-import { CssBaseline, Typography, Box } from "@mui/material";
+import { CssBaseline, Typography, Box, Link } from "@mui/material";
 import Header from "../components/Header";
 import NavigationDrawer from "../components/NavigationDrawer";
 
@@ -21,24 +21,45 @@ const Page = () => {
             margin: 0;
             padding: 0;
             height: 100%;
-            overflow: hidden; /* Prevent scroll bars */
+            background-color: #1c375d; /* Blue background behind image */
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+            overflow-y: auto; /* Allow vertical scrolling when necessary */
+          }
+
+          /* Ensure the full viewport is used for the image section */
+          .image-section {
+            position: relative;
+            height: 100vh; /* Full viewport height for the image section */
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 80%, #1c375d 100%), url('/images/Ontario3.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+
+          .content-wrapper {
+            background-color: #1c375d; /* Blue background */
+            color: white;
+            padding: 20px;
+            padding-top: 20px; /* Some padding on top to keep the content aligned */
+            /* Removed min-height to avoid unnecessary scroll space */
+            padding-bottom: 20px; /* Padding to ensure space at the bottom */
+          }
+
+          .languages-info {
+            margin-top: 20px;
+          }
+
+          .frameworks-info {
+            margin-top: 20px;
           }
         `}
       </style>
+
       <Header />
       <NavigationDrawer drawerOpen={drawerOpen} toggleDrawer={toggleDrawer} />
 
       {/* Full Image Section with Smooth Fade */}
-      <Box
-        sx={{
-          position: "relative",
-          height: "100vh", // Full viewport height for the image section
-          backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0) 80%, white 100%), url('/images/Ontario3.jpg')`,
-          backgroundSize: "cover",
-          backgroundPosition: { xs: "80% center", md: "center" },
-          backgroundRepeat: "no-repeat",
-        }}
-      >
+      <Box className="image-section">
         {/* Welcome Text */}
         <Box
           sx={{
@@ -77,11 +98,21 @@ const Page = () => {
               mt: 2,
               color: "white",
               textShadow: "1px 1px 2px rgba(0, 0, 0, 0.7)",
-              maxWidth: "40%",
+              maxWidth: { xs: "100%", md: "40%" },
+              padding: { xs: 2, md: 0 },
             }}
-            // add text below
           >
-            
+            Passionate about building efficient and innovative software solutions.
+            Experienced in a range of programming languages, frameworks, and DevOps tools. Check out my projects, work experience, or interests to learn more about me!
+            <br />
+            <strong>Languages:</strong> C, C#, Java, JavaScript, TypeScript, Python, Perl, R, and <Link href="/techtools">more</Link>.
+            <br />
+            <strong>Databases:</strong> PostgreSQL, SQLite.
+            <br />
+            <strong>Frameworks:</strong> React, Next.js, Spring, .NET, WPF.
+            <br />
+            <strong>DevOps & Tools:</strong> Docker, Git, Jenkins, Selenium, Ansible.
+            <br />
           </Typography>
         </Box>
       </Box>
