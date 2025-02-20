@@ -109,9 +109,9 @@ const Page = () => {
             <br />
             <strong>Databases:</strong> PostgreSQL, SQLite.
             <br />
-            <strong>Frameworks:</strong> React, Next.js, Spring, .NET, WPF.
+            <strong>Frameworks:</strong> React, Next.js, Spring, .NET, WPF and <Link href="/techtools">more</Link>.
             <br />
-            <strong>DevOps & Tools:</strong> Docker, Git, Jenkins, Selenium, Ansible.
+            <strong>DevOps & Tools:</strong> Docker, Git, Jenkins, Selenium, Ansible, and JUnit.
             <br />
           </Typography>
         </Box>
