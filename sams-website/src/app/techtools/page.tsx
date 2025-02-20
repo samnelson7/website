@@ -1,3 +1,5 @@
+/* eslint-disable  @typescript-eslint/no-explicit-any */
+
 "use client";
 
 import React from "react";
@@ -254,31 +256,31 @@ export default function TechToolsPage() {
 
       {/* Dialog for showing code example */}
       <Dialog open={openDialog} onClose={handleDialogClose}>
-  <DialogTitle>{selectedTool?.name}</DialogTitle>
-  <DialogContent>
-    {/* Box for code styling with proper background and padding */}
-    <Box 
-      component="pre"
-      sx={{
-        backgroundColor: '#282c34', // Dark background for code block
-        color: 'white', // White text color
-        padding: 2, // Padding inside the code block
-        borderRadius: 1, // Rounded corners
-        fontFamily: 'Monaco, monospace', // Monospace font for code
-        fontSize: '1rem', // Font size for readability
-        overflowX: 'auto', // Scroll for horizontal overflow
-        whiteSpace: 'pre-line', // Preserve newlines but allow wrapping
-      }}
-    >
-      <code>{selectedTool?.sampleCode}</code>
-    </Box>
-  </DialogContent>
-  <DialogActions>
-    <Button onClick={handleDialogClose} color="primary">
-      Close
-    </Button>
-  </DialogActions>
-</Dialog>
+        <DialogTitle>{selectedTool?.name}</DialogTitle>
+        <DialogContent>
+          {/* Box for code styling with proper background and padding */}
+          <Box 
+            component="pre"
+            sx={{
+              backgroundColor: '#282c34', // Dark background for code block
+              color: 'white', // White text color
+              padding: 2, // Padding inside the code block
+              borderRadius: 1, // Rounded corners
+              fontFamily: 'Monaco, monospace', // Monospace font for code
+              fontSize: '1rem', // Font size for readability
+              overflowX: 'auto', // Scroll for horizontal overflow
+              whiteSpace: 'pre-line', // Preserve newlines but allow wrapping
+            }}
+          >
+            <code>{selectedTool?.sampleCode}</code>
+          </Box>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleDialogClose} color="primary">
+            Close
+          </Button>
+        </DialogActions>
+      </Dialog>
 
     </>
   );
