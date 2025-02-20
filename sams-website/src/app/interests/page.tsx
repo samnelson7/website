@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { CssBaseline, Box, Typography, Modal, IconButton, Link } from "@mui/material";
+import { CssBaseline, Box, Typography, Modal, IconButton } from "@mui/material";
 import ZoomInIcon from "@mui/icons-material/ZoomIn";
 import Header from "../../components/Header";
 import NavigationDrawer from "../../components/NavigationDrawer";
