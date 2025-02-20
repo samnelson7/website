@@ -142,88 +142,83 @@ export default function ProjectsPage() {
               <Box
                 sx={{
                   display: "flex",
-                  flexDirection: index % 2 === 0 ? "row" : "row-reverse",
+                  flexDirection: { xs: "column", md: index % 2 === 0 ? "row" : "row-reverse" }, // Change flex direction based on screen size
                   marginBottom: "0px",
                   alignItems: "flex-start",
                 }}
               >
                 <Box sx={{ flex: 1, padding: "20px" }}>
-  {/* Project Title (No Expand Button Here) */}
-  <Typography variant="h5">{project.title}</Typography>
+                  {/* Project Title (No Expand Button Here) */}
+                  <Typography variant="h5">{project.title}</Typography>
 
-  {/* Description Section */}
-  <Box
-    sx={{
-      maxHeight: expandedProject === project.title ? "none" : `${project.maxTextHeight}px`,
-      overflow: "hidden",
-      position: "relative",
-      paddingBottom: expandedProject !== project.title ? "40px" : "0px", // Extra space for the button
-    }}
-  >
-    <Typography variant="body1">
-      {project.title === "Business Analytics Improvement Plan" ? (
-        <>
-          This project consisted of eliciting requirements from a company for software development improvements they desired and developing a prototype based on the requirements. 
+                  {/* Description Section */}
+                  <Box
+                    sx={{
+                      maxHeight: expandedProject === project.title ? "none" : `${project.maxTextHeight}px`,
+                      overflow: "hidden",
+                      position: "relative",
+                      paddingBottom: expandedProject !== project.title ? "40px" : "0px", // Extra space for the button
+                    }}
+                  >
+                    <Typography variant="body1">
+                      {project.title === "Business Analytics Improvement Plan" ? (
+                        <>
+                          This project consisted of eliciting requirements from a company for software development improvements they desired and developing a prototype based on the requirements. 
           We worked with a company called Real Time Networks to elicit requirements and create a requirements document for the software they wanted, as well as prototyping a potential solution. 
           Their company contained numerous departments: marketing, manufacturing, accounting, and installation, and each department managed its own data footprint independently. 
           The software solution they wanted was a centralized data analytics dashboard to better concentrate their data footprint. This would allow management to be better informed
           of the work and ongoings of various departments from a single place. We developed an entire prototype for a web-based platform
           combining their data analytics and platforms as well as suggesting how to implement it with various APIs.
-          <br />
-          You can take a look at the complete requirements document as well as some of the prototype&#39;s features at the bottom of it{" "}
-          <Link href="https://github.com/samnelson7/Requirements-Engineering/blob/main/RD.md">
-            here
-          </Link>.
-        </>
-      ) : (
-        project.description
-      )}
-    </Typography>
+                          <br />
+                          You can take a look at the complete requirements document as well as some of the prototype&#39;s features at the bottom of it{" "}
+                          <Link href="https://github.com/samnelson7/Requirements-Engineering/blob/main/RD.md">
+                            here
+                          </Link>.
+                        </>
+                      ) : (
+                        project.description
+                      )}
+                    </Typography>
 
-    {/* Gradient Fade Effect at Bottom */}
-    {expandedProject !== project.title && (
-      <Box
-        sx={{
-          position: "absolute",
-          bottom: 0,
-          left: 0,
-          width: "100%",
-          height: "40px", // Only adds height, no intersection
-          background: "linear-gradient(to top, white, rgba(255,255,255,0))",
-        }}
-      />
-    )}
-  </Box>
-
-  {/* Fully Below Text in Padding Area */}
-  {/* Expand Button (Always Present for Each Project) */}
-{expandedProject !== project.title && (
-  <Box sx={{ display: "flex", justifyContent: "center", marginTop: "0px" }}>
-    <IconButton onClick={() => toggleProjectExpansion(project.title)}>
-      <ExpandMoreIcon />
-    </IconButton>
-  </Box>
-)}
-
-
-  {/* Technologies Section (Only visible when expanded) */}
-  {expandedProject === project.title && (
-    <Box sx={{ marginTop: "10px", paddingLeft: "10px" }}>
-      <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>Technologies Used:</Typography>
-      <ul>
-        {project.technologies.map((tech, idx) => (
-          <li key={idx}>
-            <Typography variant="body2">{tech}</Typography>
-          </li>
-        ))}
-      </ul>
-    </Box>
-  )}
-</Box>
-
+                    {/* Gradient Fade Effect at Bottom */}
+                    {expandedProject !== project.title && (
+                      <Box
+                        sx={{
+                          position: "absolute",
+                          bottom: 0,
+                          left: 0,
+                          width: "100%",
+                          height: "40px", // Only adds height, no intersection
+                          background: "linear-gradient(to top, white, rgba(255,255,255,0))",
+                        }}
+                      />
+                    )}
+                  </Box>
+                  {/* Expand Button (Always Present for Each Project) */}
+                  {expandedProject !== project.title && (
+                    <Box sx={{ display: "flex", justifyContent: "center", marginTop: "0px" }}>
+                      <IconButton onClick={() => toggleProjectExpansion(project.title)}>
+                        <ExpandMoreIcon />
+                      </IconButton>
+                    </Box>
+                  )}
+                  {/* Technologies Section (Only visible when expanded) */}
+                  {expandedProject === project.title && (
+                    <Box sx={{ marginTop: "10px", paddingLeft: "10px" }}>
+                      <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>Technologies Used:</Typography>
+                      <ul>
+                        {project.technologies.map((tech, idx) => (
+                          <li key={idx}>
+                            <Typography variant="body2">{tech}</Typography>
+                          </li>
+                        ))}
+                      </ul>
+                    </Box>
+                  )}
+                </Box>
 
                 {/* Media Section (Image/Video) */}
-                <Box sx={{ flex: 1, padding: "20px", maxWidth: "50%", position: "relative" }}>
+                <Box sx={{ flex: 1, padding: "20px", maxWidth: {xs: "100%", md: "50%"}, position: "relative" }}>
                   {project.mediaType === "image" ? (
                     <Box sx={{ position: "relative", display: "inline-block" }}>
                       <img
@@ -254,6 +249,7 @@ export default function ProjectsPage() {
                   )}
                 </Box>
               </Box>
+
 
               {index < projects.length - 1 && (
                 <hr style={{ margin: "20px 0", borderColor: "#ccc", borderWidth: "1px", borderStyle: "solid" }} />
