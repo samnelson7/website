@@ -1,123 +1,88 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { CssBaseline, Box, Typography, Modal, IconButton, Link } from "@mui/material";
 import ZoomInIcon from "@mui/icons-material/ZoomIn";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Header from "../../components/Header";
 import NavigationDrawer from "../../components/NavigationDrawer";
 import CloseIcon from "@mui/icons-material/Close";
 
-interface Project {
+interface Interest {
   title: string;
   description: string;
-  mediaUrl: string;
-  mediaType: "image" | "video";
-  technologies: string[];
-  maxTextHeight: number; // Max height before cut off
+  media: { url: string; type: "image" | "video" }[];
 }
 
-const projects: Project[] = [
+const Interests: Interest[] = [
   {
-    title: "Weld Access Verification Tool",
-    description: "The AGT Robotics BeamMaster WAV (Weld Access Verification) Tool is an innovative Tekla plugin that revolutionizes weld planning in steel fabrication. By automatically integrating true-to-scale weld arm models into your Tekla environment, this powerful tool allows designers and engineers to visualize real-world welding scenarios, instantly identify potential access issues, and optimize projects for AGT BeamMaster robotic welding systems. I worked on this application during my time at Exact Detailing with one other co-op student. We found ourselves incredibly dedicated to the completion of this project and were able to complete and publish it over the course of our 4-month internships. We picked up the project from where some previous students had left off but wound up reworking most of the application due to changing business goals and project requirements. Working closely with AGT Robotics, we were able to publish this to an online catalog where it can be downloaded for use by anybody with a Tekla license.",
-    mediaUrl: "/videos/WAVDemo.mp4",
-    mediaType: "video",
-    technologies: ["C#", ".NET", "WPF", "Windows Forms"],
-    maxTextHeight: 253, // Example max height for this project description
+    title: "Basketball",
+    description: "I picked up basketball in late elementary school and early high school and quickly fell in love with it. Despite my natural lack of ball handling and shooting abilities, I found myself spending much of my free time in high school obsessing over improving my game, spending countless weekends and late nights practicing. I still play basketball several times a week between various men's leagues, intramurals at university, and just practicing my shooting and dribbling on my own. The past two years I have played with a close group of friends on an intramural team called the Troglodytes, making it to the semi-finals of our intramural league through heart and determination alone. Half of our team consists of long time basketball players and the other half are just happy to be there. During busy school semesters the Monday night Troglodyte games are something I look forward to consistently. Featured here are photos of the Troglodytes and my first intramural team, the Wildcats, where I met some of my first close friends at university that I am still friends with.",
+    media: [{ url: "/images/interests/Basketball/Trogs.jpg", type: "image" },
+      { url: "/images/interests/Basketball/TrogPyramid.jpg", type: "image" },
+      { url: "/images/interests/Basketball/Wildcats.jpg", type: "image" }],
   },
   {
-    title: "VirtualER",
-    description: "This web-based application allows patients to easily find wait times of nearby emergency rooms to meet their medical needs. The project consisted of both a full implementation of the product as well as a detailed requirements phase, diagrams, and project planning. The project was for a Software Architecture class, but our design, tools used, approach, and system was all original work from our 4 person team. I would have liked to spend more time consulting with healthcare workers in order to more closely meet the needs of the actual healthcare field rather than the project requirements that were outlined. I am confident that we met the requirements for the scope of our project, but I feel like the application would need some serious overhauls to be used in any sort of workplace. One thing that I believe is a bit of an oversight with this project is that many workplaces simply don't have the staff to support an app like this. It requires too much help from ER staff to run properly and in order to be automated there are serious ethical and legal considerations involved.",
-    mediaUrl: "/images/VirtualER.png",
-    mediaType: "image",
-    technologies: ["Next.js", "React", "Tailwind CSS", "ShadCN Component Library"],
-    maxTextHeight: 205,
+    title: "Travel",
+    description: "When I was a kid I hated travel. I had terrible motion sickness and would've been far happier playing Pokemon on my Nintendo DS or Mario Kart on my Wii. As I've gotten older, though, I have grown a great appreciation for exploring different cultures, nature, and food. Recently I have made the most of my time between semesters at school and co-op terms, squeezing in some quick but very busy trips. Last summer I went on a trip to Japan with my mom. We spent our time walking the Nakasendo Samurai trail, exploring art exhibits, visiting castles, and learning about the history of the country. The highlight of this trip was climbing to the top of the mountain holding the Inari Shrine in Kyoto at night and in the rain after a long day of riding trains. Two years ago I also squeezed in a trip to Europe with my childhood friend James and his sister Katie. We visited Dublin, Amsterdam, Bruges, Paris, and Brussels with some stops between each of them. I loved taking the trains between each of these cities and exploring the countryside. One of my favourite meals was at a breakfast restaurant in Bruges that serves gourmet toast. It is still one of the best meals I have ever eaten.",
+    media: [{ url: "/images/interests/Travel/Fuji.JPG", type: "image" },
+      { url: "/images/interests/Travel/Fujiphoto2.JPG", type: "image" },
+      { url: "/images/interests/Travel/Himeiji.JPG", type: "image" },
+      { url: "/images/interests/Travel/Amsterdam.jpg", type: "image" },
+      { url: "/images/interests/Travel/TokyoTower.JPG", type: "image" },
+      { url: "/images/interests/Travel/Jimbo.jpg", type: "image" },
+      { url: "/images/interests/Travel/PrettyRiver.jpg", type: "image" },
+    ],
   },
   {
-    title: "Automated Feedback for Engineering",
-    description: "In the Summer of 2022 an advisor within the faculty of engineering reached out to me suggesting that I apply for a research grant based on my academic standing. Together with Dr. Flavio Firmani, I applied for funding towards a joint research project in order to provide students with automated feedback for homework problems and improve learning outcomes. Dr. Firmani identified that students frequently make similar mistakes, but due to the volume of students, individualized feedback was impossible. This led to our research into both diagnosing frequent mistakes made by students and into the kinds of tools we had available to improve the learning outcomes based on patterns we found. After gaining some insight into frequent problems made by students, we looked into the tools provided within WeBWork, the online homework system used for the statics class we were investigating. The main outcomes of our research included generating graphs for students automatically based on their inputs to provide a visual aid and automated feedback messages for various pre-defined inputs. Given more time, I would've liked to collect data based on student submissions in order to better categorize common mistakes.",
-    mediaUrl: "/images/VKURA.jpg",
-    mediaType: "image",
-    technologies: ["Perl", "WeBWork", "PG"],
-    maxTextHeight: 350,
+    title: "Hiking",
+    description: "Similarly to travel, when I was younger I didn't care much for hiking. It made my legs hurt and was hard. While those things haven't changed, I love climbing mountains nonetheless. Whenever I can make it happen I am probably out somewhere on a mountain. During my trip to Japan I climbed a few mountains near Mount Fuji that had incredible views of it, for instance. This past summer I climbed a number of mountains, including Crest, Arrowsmith, and Golden Ears. The nature and views from all three of these were stunning, although it was cloudy and wet during my ascent of Golden Ears. I am excited for another summer of hiking this year.",
+    media: [{ url: "/images/interests/Hiking/Wedgemount.jpg", type: "image" },
+      { url: "/images/interests/Hiking/WedgemountGroup.jpg", type: "image" },
+      { url: "/images/interests/Hiking/Jardine.jpg", type: "image" },
+      { url: "/images/interests/Hiking/IceMountain.jpg", type: "image" },
+      { url: "/images/interests/Hiking/GESolo.jpg", type: "image" }
+    ],
   },
   {
-    title: "Personal Website",
-    description: "After several years of toying with the idea of coding a website myself amongst a busy school schedule I made time to practice my development skills with web-based applications. The result is this portfolio of my education, work, skills, and projects that I am especially passionate about. Following the development of VirtualER, I wanted to create a Next.js application to function as a personal website while I was still learning these new technologies. I am very happy with how it turned out and welcome any feedback! Click on my icon or visit the contact me page to reach out and let me know what you think!",
-    mediaUrl: "/images/Website.png",
-    mediaType: "image",
-    technologies: ["Next.js", "React", "Tailwind CSS", "MaterialUI"],
-    maxTextHeight: 240,
+    title: "Paddling",
+    description: "Ever since I was a kid I have loved paddling. I went to paddling camp when I was younger for a few summers in a row and loved stand up paddleboarding in particular. Over the years I grew to love canoeing as well and in high school I got a job as a camp counselor at the same camp I went to when I was a kid. I worked at the Pitt Meadows Paddling Club for four years in various roles but spent most of my time leading and helping plan day camps in the summer months. During my time there, I was recruited by some women on the club's board of directors to join their voyageur canoe team along with James, my childhood friend. We were planning to race in the Yukon River Quest, a 715 kilometer race from Whitehorse to Dawson City in the Yukon. It is one of the longest and toughest paddlign races in the world, and we spent about a year training for it before it was unfortunately cancelled due to COVID. I am hopeful that one day we will form a new team and race the Yukon River Quest as it seems like such a great experience.",
+    media: [{ url: "/images/interests/Paddling/Silver.jpg", type: "image" }],
   },
   {
-    title: "Business Analytics Improvement Plan",
-    description: "",
-    mediaUrl: "/images/RealTime.png",
-    mediaType: "image",
-    technologies: ["Figma", "Markdown"],
-    maxTextHeight: 250,
-  },
-  {
-    title: "Autonmous IR Detection Robot",
-    description: "This project involved building a robot as a prototype for an autonomous underwater vehicle able to position a debris cleaning device on top of underwater cameras and sensors. The task required of this robot was to locate a randomly placed infrared emitter in an enclosed space, approach it, and drop a ping-pong ball on top of it without it falling off. As can be seen in the image of our robot design, we have an arm that extends in front of the robot with gears that twist open to drop the ball on the target. I assisted with the electrical work, design, and overall construction of the robot, but my biggest contribution was designing a finite state machine for our workflow and implementing that in code. Our robot was one of few able to pass all tests consistently without hitting any walls or the target.",
-    mediaUrl: "/images/Robot.jpg",
-    mediaType: "image",
-    technologies: ["RobotC", "C"],
-    maxTextHeight: 320,
+    title: "Dinosaurs",
+    description: "My first interaction with dinosaurs that I remember was a book my parents bought me that showed the sizes of various dinosaurs compared to an adult human. I remember spending hours just looking at the towering sauropods and being blown away by their size and weight. I also had a toy dinosaur mountain with a little mouth that would chomp down and a ribcage that would open when you pressed their respective buttons that I loved to play with. Through the years my love for dinosaurs has only grown, with many hours spent playing various dinosaur related video games, reading about them, and visiting museum exhibits featuring them. The pictures featured here are at the Hand of Man museum on Vancouver Island, which I cannot recommend enough if you enjoy anything related to animals and their history, and the Royal Ontario Museum dinosaur exhibit. Featured are a dimorphodon, ankylosaurus, some kind of hadrosaur, it looks like an edmontosaurus, a diplodocid of some kind, and a giganotosaurus. If the look on my face didn't give it away, I am a fan of dinosaurs.",
+    media: [{ url: "/images/interests/Dinosaurs/Dimorph.jpg", type: "image" },
+      { url: "/images/interests/Dinosaurs/Anky.jpg", type: "image" },
+      { url: "/images/interests/Dinosaurs/Dino.jpg", type: "image" },
+      { url: "/images/interests/Dinosaurs/Diplodocid.jpg", type: "image" },
+      { url: "/images/interests/Dinosaurs/Giga.jpg", type: "image" }
+    ],
   },
 ];
 
-export default function ProjectsPage() {
+export default function InterestsPage() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [open, setOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const [expandedProject, setExpandedProject] = useState<string | null>(null);
 
-  const toggleDrawer = () => {
-    setDrawerOpen(!drawerOpen);
-  };
-
+  const toggleDrawer = () => setDrawerOpen(!drawerOpen);
   const handleImageClick = (url: string) => {
     setSelectedImage(url);
     setOpen(true);
   };
-
   const handleCloseModal = () => {
     setOpen(false);
     setSelectedImage(null);
   };
 
-  const toggleProjectExpansion = (title: string) => {
-    if (expandedProject === title) {
-      setExpandedProject(null);
-    } else {
-      setExpandedProject(title);
-    }
-  };
-
-  useEffect(() => {
-    if (open) {
-      document.body.style.overflow = "hidden";
-      document.documentElement.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-      document.documentElement.style.overflow = "auto";
-    }
-
-    return () => {
-      document.body.style.overflow = "auto";
-      document.documentElement.style.overflow = "auto";
-    };
-  }, [open]);
-
   return (
     <>
       <CssBaseline />
-      <Header/>
+      <Header />
       <NavigationDrawer drawerOpen={drawerOpen} toggleDrawer={toggleDrawer} />
 
       <Box sx={{ display: "flex", width: "100%" }}>
+        {/* Left Sidebar */}
         <Box
           sx={{
             width: "10%",
@@ -127,141 +92,112 @@ export default function ProjectsPage() {
             top: 0,
             left: 0,
             zIndex: 1,
-            display: { xs: "none", md: "block" }, // Hide on small screens
+            display: { xs: "none", md: "block" },
           }}
         />
 
-          <Box sx={{ flex: 1, marginLeft: { xs: "0%", md: "10%" }, marginRight: { xs: "0%", md: "10%" } }}>
-          <Typography variant="h4" component="h1" gutterBottom sx={{ marginLeft: "20px", marginTop: "20px" }}>
-            Interests
-          </Typography>
-          <hr style={{ margin: "20px 0", borderColor: "#ccc" }} />
+        {/* Main Content */}
+        <Box sx={{ flex: 1, marginLeft: "10%", marginRight: "10%", padding: "20px" }}>
+        <Typography variant="h4" component="h1" gutterBottom>
+          Interests
+        </Typography>
+        <hr style={{ margin: "20px 0", borderColor: "#ccc" }} />
 
-          {projects.map((project, index) => (
-            <Box key={project.title}>
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: index % 2 === 0 ? "row" : "row-reverse",
-                  marginBottom: "0px",
-                  alignItems: "flex-start",
-                }}
-              >
-                <Box sx={{ flex: 1, padding: "20px" }}>
-  {/* Project Title (No Expand Button Here) */}
-  <Typography variant="h5">{project.title}</Typography>
+        {Interests.map((Interest, index) => (
+          <Box key={Interest.title} sx={{ marginBottom: "40px" }}>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: {
+                  xs: "column",
+                  sm: index % 2 === 0 ? "row" : "row-reverse", // Row for larger screens
+                },
+                alignItems: "flex-start",
+                gap: "20px",
+              }}
+            >
+              {/* Left Column: Text and First Image */}
+              <Box sx={{ flex: 1 }}>
+                <Typography variant="h5">{Interest.title}</Typography>
+                <Typography variant="body1">{Interest.description}</Typography>
 
-  {/* Description Section */}
-  <Box
-    sx={{
-      maxHeight: expandedProject === project.title ? "none" : `${project.maxTextHeight}px`,
-      overflow: "hidden",
-      position: "relative",
-      paddingBottom: expandedProject !== project.title ? "40px" : "0px", // Extra space for the button
-    }}
-  >
-    <Typography variant="body1">
-      {project.title === "Business Analytics Improvement Plan" ? (
-        <>
-          This project consisted of eliciting requirements from a company for software development improvements they desired and developing a prototype based on the requirements. 
-          We worked with a company called Real Time Networks to elicit requirements and create a requirements document for the software they wanted, as well as prototyping a potential solution. 
-          Their company contained numerous departments: marketing, manufacturing, accounting, and installation, and each department managed its own data footprint independently. 
-          The software solution they wanted was a centralized data analytics dashboard to better concentrate their data footprint. This would allow management to be better informed
-          of the work and ongoings of various departments from a single place. We developed an entire prototype for a web-based platform
-          combining their data analytics and platforms as well as suggesting how to implement it with various APIs.
-          <br />
-          You can take a look at the complete requirements document as well as some of the prototype&#39;s features at the bottom of it{" "}
-          <Link href="https://github.com/samnelson7/Requirements-Engineering/blob/main/RD.md">
-            here
-          </Link>.
-        </>
-      ) : (
-        project.description
-      )}
-    </Typography>
-
-    {/* Gradient Fade Effect at Bottom */}
-    {expandedProject !== project.title && (
-      <Box
-        sx={{
-          position: "absolute",
-          bottom: 0,
-          left: 0,
-          width: "100%",
-          height: "40px", // Only adds height, no intersection
-          background: "linear-gradient(to top, white, rgba(255,255,255,0))",
-        }}
-      />
-    )}
-  </Box>
-
-  {/* Fully Below Text in Padding Area */}
-  {/* Expand Button (Always Present for Each Project) */}
-{expandedProject !== project.title && (
-  <Box sx={{ display: "flex", justifyContent: "center", marginTop: "0px" }}>
-    <IconButton onClick={() => toggleProjectExpansion(project.title)}>
-      <ExpandMoreIcon />
-    </IconButton>
-  </Box>
-)}
-
-
-  {/* Technologies Section (Only visible when expanded) */}
-  {expandedProject === project.title && (
-    <Box sx={{ marginTop: "10px", paddingLeft: "10px" }}>
-      <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>Technologies Used:</Typography>
-      <ul>
-        {project.technologies.map((tech, idx) => (
-          <li key={idx}>
-            <Typography variant="body2">{tech}</Typography>
-          </li>
-        ))}
-      </ul>
-    </Box>
-  )}
-</Box>
-
-
-                {/* Media Section (Image/Video) */}
-                <Box sx={{ flex: 1, padding: "20px", maxWidth: "50%", position: "relative" }}>
-                  {project.mediaType === "image" ? (
-                    <Box sx={{ position: "relative", display: "inline-block" }}>
-                      <img
-                        src={project.mediaUrl}
-                        alt={project.title}
-                        style={{ width: "100%", height: "auto", cursor: "pointer" }}
-                        onClick={() => handleImageClick(project.mediaUrl)}
-                      />
-                      <IconButton
-                        sx={{
-                          position: "absolute",
-                          bottom: 10,
-                          right: 10,
-                          backgroundColor: "rgba(0,0,0,0.6)",
-                          color: "white",
-                          "&:hover": { backgroundColor: "rgba(0,0,0,0.8)" },
-                        }}
-                        onClick={() => handleImageClick(project.mediaUrl)}
-                      >
-                        <ZoomInIcon />
-                      </IconButton>
-                    </Box>
-                  ) : (
-                    <video width="100%" height="auto" controls>
-                      <source src={project.mediaUrl} type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                  )}
-                </Box>
+                {/* First image below text */}
+                {Interest.media.filter((_, index) => index % 2 !== 0).map((mediaItem, idx) => (
+                  <Box key={idx} sx={{ marginBottom: "10px", position: "relative" }}>
+                    {mediaItem.type === "image" ? (
+                      <Box sx={{ position: "relative", display: "inline-block" }}>
+                        <img
+                          src={mediaItem.url}
+                          alt={Interest.title}
+                          style={{ width: "100%", height: "auto", cursor: "pointer" }}
+                          onClick={() => handleImageClick(mediaItem.url)}
+                        />
+                        <IconButton
+                          sx={{
+                            position: "absolute",
+                            bottom: 10,
+                            right: 10,
+                            backgroundColor: "rgba(0,0,0,0.6)",
+                            color: "white",
+                            "&:hover": { backgroundColor: "rgba(0,0,0,0.8)" },
+                          }}
+                          onClick={() => handleImageClick(mediaItem.url)}
+                        >
+                          <ZoomInIcon />
+                        </IconButton>
+                      </Box>
+                    ) : (
+                      <video width="100%" height="auto" controls>
+                        <source src={mediaItem.url} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    )}
+                  </Box>
+                ))}
               </Box>
 
-              {index < projects.length - 1 && (
-                <hr style={{ margin: "20px 0", borderColor: "#ccc", borderWidth: "1px", borderStyle: "solid" }} />
-              )}
+              {/* Right Column: Remaining Images */}
+              <Box sx={{ flex: 1, display: "flex", flexDirection: "column" }}>
+                {Interest.media.filter((_, index) => index % 2 === 0).map((mediaItem, idx) => (
+                  <Box key={idx} sx={{ marginBottom: "10px", position: "relative" }}>
+                    {mediaItem.type === "image" ? (
+                      <Box sx={{ position: "relative", display: "inline-block" }}>
+                        <img
+                          src={mediaItem.url}
+                          alt={Interest.title}
+                          style={{ width: "100%", height: "auto", cursor: "pointer" }}
+                          onClick={() => handleImageClick(mediaItem.url)}
+                        />
+                        <IconButton
+                          sx={{
+                            position: "absolute",
+                            bottom: 10,
+                            right: 10,
+                            backgroundColor: "rgba(0,0,0,0.6)",
+                            color: "white",
+                            "&:hover": { backgroundColor: "rgba(0,0,0,0.8)" },
+                          }}
+                          onClick={() => handleImageClick(mediaItem.url)}
+                        >
+                          <ZoomInIcon />
+                        </IconButton>
+                      </Box>
+                    ) : (
+                      <video width="100%" height="auto" controls>
+                        <source src={mediaItem.url} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    )}
+                  </Box>
+                ))}
+              </Box>
             </Box>
-          ))}
-        </Box>
 
+            {index < Interests.length - 1 && <hr style={{ margin: "20px 0", borderColor: "#ccc" }} />}
+          </Box>
+        ))}
+      </Box>
+        {/* Right Sidebar */}
         <Box
           sx={{
             width: "10%",
@@ -276,56 +212,51 @@ export default function ProjectsPage() {
         />
       </Box>
 
-      {/* Fullscreen Modal for Image */}
-      <Modal
-        open={open}
-        onClose={handleCloseModal}
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-        onClick={handleCloseModal}
-      >
-        <Box
-          sx={{
-            position: "relative",
-            maxWidth: "100%",
-            maxHeight: "100%",
-            overflow: "auto",
-            backgroundColor: "rgba(0, 0, 0, 0.8)",
-          }}
-        >
-          <IconButton
-            sx={{
-              position: "absolute",
-              top: 10,
-              right: 10,
-              color: "white",
-              zIndex: 2,
-              backgroundColor: "rgba(0,0,0,0.5)",
-              "&:hover": {
-                backgroundColor: "rgba(0, 0, 0, 0.7)",
-              },
-            }}
-            onClick={handleCloseModal}
-          >
-            <CloseIcon />
-          </IconButton>
+      {/* Fullscreen Image Modal */}
+<Modal
+  open={open}
+  onClose={handleCloseModal}
+  sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+>
+  <Box
+    sx={{
+      position: "relative",
+      maxWidth: "100%",
+      maxHeight: "100%",
+      overflow: "auto",
+      backgroundColor: "rgba(0, 0, 0, 0.8)",
+    }}
+  >
+    <IconButton
+      sx={{
+        position: "absolute",
+        top: 10,
+        right: 10,
+        color: "white",
+        backgroundColor: "rgba(0,0,0,0.5)",
+        "&:hover": { backgroundColor: "rgba(0, 0, 0, 0.7)" },
+      }}
+      onClick={handleCloseModal}
+    >
+      <CloseIcon />
+    </IconButton>
 
-          <img
-            src={selectedImage || ""}
-            alt="Selected project"
-            style={{
-              width: "100%",
-              height: "auto",
-              maxHeight: "100vh",
-              objectFit: "contain",
-            }}
-            onClick={handleCloseModal}
-          />
-        </Box>
-      </Modal>
+    {/* Clicking the image will now close the modal */}
+    <img
+      src={selectedImage || ""}
+      alt="Selected Interest"
+      style={{
+        width: "100%",
+        height: "auto",
+        maxHeight: "100vh",
+        objectFit: "contain",
+        cursor: "pointer",
+      }}
+      onClick={handleCloseModal}
+    />
+  </Box>
+</Modal>
+
     </>
   );
 }
