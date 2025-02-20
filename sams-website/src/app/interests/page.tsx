@@ -118,8 +118,13 @@ export default function InterestsPage() {
             >
               {/* Left Column: Text and First Image */}
               <Box sx={{ flex: 1 }}>
-                <Typography variant="h5">{Interest.title}</Typography>
-                <Typography variant="body1">{Interest.description}</Typography>
+              <Typography variant="h5" sx={{ fontSize: { xs: "1.5rem", md: "2rem" } }}>
+                {Interest.title}
+              </Typography>
+              <Typography variant="body1" sx={{ fontSize: { xs: "1rem", md: "1.25rem" } }}>
+                {Interest.description}
+              </Typography>
+
 
                 {/* First image below text */}
                 {Interest.media.filter((_, index) => index % 2 !== 0).map((mediaItem, idx) => (
