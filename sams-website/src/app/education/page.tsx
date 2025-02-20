@@ -68,10 +68,10 @@ export default function Layout() {  // Removed `children` prop here
               University of Victoria (2021-2026)
             </Typography>
             <Typography variant="body2" gutterBottom>
-              ▪ Highly motivated student with a 90% GPA
+              ▪ High achieving student with a 90% GPA
             </Typography>
             <Typography variant="body2" gutterBottom>
-              ▪ Performed joint research on generating automated feedback to improve student outcomes
+              ▪ Performed joint research on generating automated feedback to improve student outcomes. Check out <Link href="/projects">Automated Feedback for Engineering</Link> in my projects!
             </Typography>
             <hr style={{ margin: "20px 0", borderColor: "#ccc" }} />
           </Box>

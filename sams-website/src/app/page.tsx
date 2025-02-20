@@ -35,7 +35,7 @@ const Page = () => {
           height: "100vh", // Full viewport height for the image section
           backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0) 80%, white 100%), url('/images/Ontario3.jpg')`,
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: { xs: "80% center", md: "center" },
           backgroundRepeat: "no-repeat",
         }}
       >
