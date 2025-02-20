@@ -105,11 +105,14 @@ const Page = () => {
             Passionate about building efficient and innovative software solutions.
             Experienced in a range of programming languages, frameworks, and DevOps tools. Check out my projects, work experience, or interests to learn more about me!
             <br />
-            <strong>Languages:</strong> C, C#, Java, JavaScript, TypeScript, Python, Perl, R, and <Link href="/techtools">more</Link>.
+            <br />
+            <strong>Want to see all of the tools I have used and languages I know? Visit <Link href="/techtools">technologies and tools</Link> for more! </strong>
+            <br />
+            <strong>Languages:</strong> C, C#, Java, JavaScript, TypeScript, Python, Perl, R, and more.
             <br />
             <strong>Databases:</strong> PostgreSQL, SQLite.
             <br />
-            <strong>Frameworks:</strong> React, Next.js, Spring, .NET, WPF and <Link href="/techtools">more</Link>.
+            <strong>Frameworks:</strong> React, Next.js, Spring, .NET, WPF and more.
             <br />
             <strong>DevOps & Tools:</strong> Docker, Git, Jenkins, Selenium, Ansible, and JUnit.
             <br />
