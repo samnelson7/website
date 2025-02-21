@@ -17,13 +17,14 @@ const Interests: Interest[] = [
   {
     title: "Basketball",
     description: "I picked up basketball in late elementary school and early high school and quickly fell in love with it. Despite my natural lack of ball handling and shooting abilities, I found myself spending much of my free time in high school obsessing over improving my game, spending countless weekends and late nights practicing. I still play basketball several times a week between various men's leagues, intramurals at university, and just practicing my shooting and dribbling on my own. The past two years I have played with a close group of friends on an intramural team called the Troglodytes, making it to the semi-finals of our intramural league through heart and determination alone. Half of our team consists of long time basketball players and the other half are just happy to be there. During busy school semesters the Monday night Troglodyte games are something I look forward to consistently. Featured here are photos of the Troglodytes and my first intramural team, the Wildcats, where I met some of my first close friends at university that I am still friends with.",
-    media: [{ url: "/images/interests/Basketball/Trogs.jpg", type: "image" },
+    media: [
       { url: "/images/interests/Basketball/TrogPyramid.jpg", type: "image" },
+      { url: "/images/interests/Basketball/Trogs2.jpg", type: "image" },
       { url: "/images/interests/Basketball/Wildcats.jpg", type: "image" }],
   },
   {
     title: "Travel",
-    description: "When I was a kid I hated travel. I had terrible motion sickness and would've been far happier playing Pokemon on my Nintendo DS or Mario Kart on my Wii. As I've gotten older, though, I have grown a great appreciation for exploring different cultures, nature, and food. Recently I have made the most of my time between semesters at school and co-op terms, squeezing in some quick but very busy trips. Last summer I went on a trip to Japan with my mom. We spent our time walking the Nakasendo Samurai trail, exploring art exhibits, visiting castles, and learning about the history of the country. The highlight of this trip was climbing to the top of the mountain holding the Inari Shrine in Kyoto at night and in the rain after a long day of riding trains. Two years ago I also squeezed in a trip to Europe with my childhood friend James and his sister Katie. We visited Dublin, Amsterdam, Bruges, Paris, and Brussels with some stops between each of them. I loved taking the trains between each of these cities and exploring the countryside. One of my favourite meals was at a breakfast restaurant in Bruges that serves gourmet toast. It is still one of the best meals I have ever eaten.",
+    description: "When I was a kid I hated travel. I had terrible motion sickness and would've been far happier playing Pokemon on my Nintendo DS or Mario Kart on my Wii. As I've gotten older, though, I have grown a great appreciation for exploring different cultures, nature, and food. Recently I have made the most of my time between semesters at school and co-op terms, squeezing in some quick but very busy trips. Last summer I went on a trip to Japan with my mom. We spent our time walking the Nakasendo Samurai trail, exploring art exhibits, visiting castles, and learning about the history of the country. The highlight of this trip was climbing to the top of the mountain holding the Inari Shrine in Kyoto at night and in the rain after a long day of riding trains. Two years ago I also squeezed in a trip to Europe with my childhood friend James and his sister Katie. We visited Dublin, Amsterdam, Bruges, Paris, and Brussels with some stops between each of them. I loved taking the trains between each of these cities and exploring the countryside. One the best meals I have ever eaten was on this trip at a breakfast restaurant in Bruges that serves gourmet toast.",
     media: [{ url: "/images/interests/Travel/Fuji.JPG", type: "image" },
       { url: "/images/interests/Travel/Fujiphoto2.JPG", type: "image" },
       { url: "/images/interests/Travel/Himeiji.JPG", type: "image" },
@@ -37,7 +38,7 @@ const Interests: Interest[] = [
     title: "Hiking",
     description: "Similarly to travel, when I was younger I didn't care much for hiking. It made my legs hurt and was hard. While those things haven't changed, I love climbing mountains nonetheless. Whenever I can make it happen I am probably out somewhere on a mountain. During my trip to Japan I climbed a few mountains near Mount Fuji that had incredible views of it, for instance. This past summer I climbed a number of mountains, including Crest, Arrowsmith, and Golden Ears. The nature and views from all three of these were stunning, although it was cloudy and wet during my ascent of Golden Ears. I am excited for another summer of hiking this year.",
     media: [{ url: "/images/interests/Hiking/Wedgemount.jpg", type: "image" },
-      { url: "/images/interests/Hiking/WedgemountGroup.jpg", type: "image" },
+      { url: "/images/interests/Hiking/WedgemountGroup2.jpg", type: "image" },
       { url: "/images/interests/Hiking/Jardine.jpg", type: "image" },
       { url: "/images/interests/Hiking/IceMountain.jpg", type: "image" },
       { url: "/images/interests/Hiking/GESolo.jpg", type: "image" }
@@ -52,10 +53,10 @@ const Interests: Interest[] = [
     title: "Dinosaurs",
     description: "My first interaction with dinosaurs that I remember was a book my parents bought me that showed the sizes of various dinosaurs compared to an adult human. I remember spending hours just looking at the towering sauropods and being blown away by their size and weight. I also had a toy dinosaur mountain with a little mouth that would chomp down and a ribcage that would open when you pressed their respective buttons that I loved to play with. Through the years my love for dinosaurs has only grown, with many hours spent playing various dinosaur related video games, reading about them, and visiting museum exhibits featuring them. The pictures featured here are at the Hand of Man museum on Vancouver Island, which I cannot recommend enough if you enjoy anything related to animals and their history, and the Royal Ontario Museum dinosaur exhibit. Featured are a dimorphodon, ankylosaurus, some kind of hadrosaur, it looks like an edmontosaurus, a diplodocid of some kind, and a giganotosaurus. If the look on my face didn't give it away, I am a fan of dinosaurs.",
     media: [{ url: "/images/interests/Dinosaurs/Dimorph.jpg", type: "image" },
-      { url: "/images/interests/Dinosaurs/Anky.jpg", type: "image" },
+      { url: "/images/interests/Dinosaurs/Anky2.jpg", type: "image" },
       { url: "/images/interests/Dinosaurs/Dino.jpg", type: "image" },
+      { url: "/images/interests/Dinosaurs/Giga2.jpg", type: "image" },
       { url: "/images/interests/Dinosaurs/Diplodocid.jpg", type: "image" },
-      { url: "/images/interests/Dinosaurs/Giga.jpg", type: "image" }
     ],
   },
 ];
