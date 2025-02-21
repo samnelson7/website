@@ -59,8 +59,18 @@ export default function Page() {
         >
           {/* All your content goes here */}
           <Box>
-          <Typography variant="h4" component="h1" gutterBottom>
+          <Typography 
+                      variant="h4" 
+                      component="h1" 
+                      gutterBottom 
+                      sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}
+                    >
             Work Experience
+            <Link href="/contact" >
+              <Typography variant="h4" component="span">
+                Contact Me
+              </Typography>
+            </Link>
           </Typography>
           
           <hr style={{ margin: "20px 0", borderColor: "#ccc" }} />

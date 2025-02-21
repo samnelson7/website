@@ -58,9 +58,20 @@ export default function Layout() {  // Removed `children` prop here
           }}
         >
           <Box>
-            <Typography variant="h4" component="h1" gutterBottom>
-              Education
-            </Typography>
+          <Typography 
+            variant="h4" 
+            component="h1" 
+            gutterBottom 
+            sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}
+          >
+            Education
+            <Link href="/contact" >
+              <Typography variant="h4" component="span">
+                Contact Me
+              </Typography>
+            </Link>
+          </Typography>
+
             <Typography variant="h6" component="h2" gutterBottom>
               Bachelor of Software Engineering
             </Typography>

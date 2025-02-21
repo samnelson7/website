@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { CssBaseline, Box, Typography, Modal, IconButton } from "@mui/material";
+import { CssBaseline, Box, Typography, Modal, IconButton, Link } from "@mui/material";
 import ZoomInIcon from "@mui/icons-material/ZoomIn";
 import Header from "../../components/Header";
 import NavigationDrawer from "../../components/NavigationDrawer";
@@ -99,9 +99,19 @@ export default function InterestsPage() {
 
         {/* Main Content */}
         <Box sx={{ flex: 1, marginLeft: "10%", marginRight: "10%", padding: "20px" }}>
-        <Typography variant="h4" component="h1" gutterBottom>
-          Interests
-        </Typography>
+        <Typography 
+                              variant="h4" 
+                              component="h1" 
+                              gutterBottom 
+                              sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}
+                            >
+                    Interests
+                    <Link href="/contact" >
+                      <Typography variant="h4" component="span">
+                        Contact Me
+                      </Typography>
+                    </Link>
+                  </Typography>
         <hr style={{ margin: "20px 0", borderColor: "#ccc" }} />
 
         {Interests.map((Interest, index) => (

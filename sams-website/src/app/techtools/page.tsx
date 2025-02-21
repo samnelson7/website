@@ -3,7 +3,7 @@
 "use client";
 
 import React from "react";
-import { CssBaseline, Container, Typography, Box, Grid, Dialog, DialogActions, DialogContent, DialogTitle, Button } from "@mui/material";
+import { CssBaseline, Container, Typography, Box, Grid, Dialog, DialogActions, DialogContent, DialogTitle, Button, Link } from "@mui/material";
 import Header from "../../components/Header";
 import NavigationDrawer from "../../components/NavigationDrawer";
 import Image from "next/image";
@@ -29,6 +29,11 @@ export default function TechToolsPage() {
 
   // Grouped Tools Data with sample code examples
   const sections = {
+    Contact:[
+      {name: "Contact Me",
+        icon: <Image src="/images/profile.JPG" alt="Profile Picture" width={50} height={50} />,
+      }
+    ],
     Languages: [
       { 
         name: "Assembly", 
@@ -202,55 +207,96 @@ export default function TechToolsPage() {
           </Typography>
 
           {Object.entries(sections).map(([sectionTitle, tools]) => (
-            <Box key={sectionTitle} sx={{ mt: 4 }}>
-              <Typography variant="h5" component="h2" gutterBottom>
-                {sectionTitle}
+  <Box key={sectionTitle} sx={{ mt: 4 }}>
+    <Typography variant="h5" component="h2" gutterBottom>
+      {sectionTitle}
+    </Typography>
+
+    {sectionTitle !== "Contact" && (
+      <Typography variant="body2" sx={{ mb: 2 }}>
+        {`A selection of ${sectionTitle.toLowerCase()} that I frequently utilize in my projects.`}
+      </Typography>
+    )}
+
+    <Grid container spacing={2}>
+      {tools.map((tool, index) => (
+        <Grid item key={index}>
+          {/* Only wrap in Link if the section is "Contact" */}
+          {sectionTitle === "Contact" ? (
+            <Link href="/contact" sx={{ color: 'inherit', textDecoration: 'none' }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  padding: 1,
+                  border: "2px solid white",
+                  borderRadius: 2,
+                  textDecoration: "none",
+                  color: "inherit",
+                  height: "80px",
+                  width: "150px",
+                  backgroundColor: "#000D1A",
+                  transition: "0.3s",
+                  cursor: "pointer",
+                  "&:hover": {
+                    backgroundColor: "white",
+                    color: "#1c375d",
+                    transform: "scale(1.1)",
+                    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.2)",
+                  },
+                  "&:focus": {
+                    outline: "3px solid #1c375d",
+                    boxShadow: "0 0 5px rgba(28, 55, 93, 0.5)",
+                  },
+                }}
+              >
+                {tool.icon}
+                <Typography variant="h6" sx={{ fontSize: "1rem", marginLeft: 2 }}>
+                  {tool.name}
+                </Typography>
+              </Box>
+            </Link>
+          ) : (
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                padding: 1,
+                border: "2px solid white",
+                borderRadius: 2,
+                textDecoration: "none",
+                color: "inherit",
+                height: "80px",
+                width: "150px",
+                backgroundColor: "#000D1A",
+                transition: "0.3s",
+                cursor: "pointer",
+                "&:hover": {
+                  backgroundColor: "white",
+                  color: "#1c375d",
+                  transform: "scale(1.1)",
+                  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.2)",
+                },
+                "&:focus": {
+                  outline: "3px solid #1c375d",
+                  boxShadow: "0 0 5px rgba(28, 55, 93, 0.5)",
+                },
+              }}
+              onClick={() => handleDialogOpen(tool)}
+            >
+              {tool.icon}
+              <Typography variant="h6" sx={{ fontSize: "1rem", marginLeft: 2 }}>
+                {tool.name}
               </Typography>
-              <Typography variant="body2" sx={{ mb: 2 }}>
-                {`A selection of ${sectionTitle.toLowerCase()} that I frequently utilize in my projects.`}
-              </Typography>
-              <Grid container spacing={2}>
-                {tools.map((tool, index) => (
-                  <Grid item key={index}>
-                  <Box
-                    sx={{
-                      display: "flex",
-                      flexDirection: "row",
-                      alignItems: "center",
-                      padding: 1,
-                      border: "2px solid white",
-                      borderRadius: 2,
-                      textDecoration: "none",
-                      color: "inherit",
-                      height: "80px",
-                      width: "150px",
-                      backgroundColor: "#000D1A",
-                      transition: "0.3s",
-                      cursor: "pointer", // Pointer cursor to indicate clickability
-                      "&:hover": {
-                        backgroundColor: "white", // Change background on hover
-                        color: "#1c375d", // Change text color on hover
-                        transform: "scale(1.1)", // Slightly scale up the button on hover
-                        boxShadow: "0 4px 12px rgba(0, 0, 0, 0.2)", // Add subtle shadow on hover
-                      },
-                      "&:focus": {
-                        outline: "3px solid #1c375d", // Focus outline for accessibility
-                        boxShadow: "0 0 5px rgba(28, 55, 93, 0.5)", // Focus shadow
-                      },
-                    }}
-                    onClick={() => handleDialogOpen(tool)}
-                  >
-                    {tool.icon}
-                    <Typography variant="h6" sx={{ fontSize: "1rem", marginLeft: 2 }}>
-                      {tool.name}
-                    </Typography>
-                  </Box>
-                </Grid>
-                
-                ))}
-              </Grid>
             </Box>
-          ))}
+          )}
+        </Grid>
+      ))}
+    </Grid>
+  </Box>
+))}
         </Box>
       </Container>
 
