@@ -66,7 +66,7 @@ export default function Layout() {  // Removed `children` prop here
           >
             Education
             <Link href="/contact" >
-              <Typography variant="h4" component="span">
+              <Typography variant="h6" component="span">
                 Contact Me
               </Typography>
             </Link>

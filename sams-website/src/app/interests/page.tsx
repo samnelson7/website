@@ -107,7 +107,7 @@ export default function InterestsPage() {
                             >
                     Interests
                     <Link href="/contact" >
-                      <Typography variant="h4" component="span">
+                      <Typography variant="h6" component="span">
                         Contact Me
                       </Typography>
                     </Link>
