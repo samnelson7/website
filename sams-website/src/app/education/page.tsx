@@ -5,6 +5,9 @@ import { CssBaseline, Container, Typography, Box, Grid, Link, useMediaQuery } fr
 import { useTheme } from "@mui/material/styles";
 import Header from "../../components/Header";
 import NavigationDrawer from "../../components/NavigationDrawer";
+import SchoolIcon from "@mui/icons-material/School";
+import MenuBookIcon from "@mui/icons-material/MenuBook";
+import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 
 export default function Layout() {  // Removed `children` prop here
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -64,7 +67,10 @@ export default function Layout() {  // Removed `children` prop here
             gutterBottom 
             sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}
           >
-            Education
+            <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+              Education
+              <SchoolIcon sx={{ fontSize: 32, color: "#1c375d" }} />
+            </Box>
             <Link href="/contact" >
               <Typography variant="h6" component="span">
                 Contact Me
@@ -88,8 +94,10 @@ export default function Layout() {  // Removed `children` prop here
           </Box>
 
           <Box>
-            <Typography variant="h4" component="h1" gutterBottom>
+            <Typography variant="h4" component="h1" gutterBottom
+            sx={{ display: "flex", alignItems: "center", gap: 1 }}>
               Relevant Coursework
+              <MenuBookIcon sx={{ fontSize: 32, color: "#1c375d" }} />
             </Typography>
 
             {/* Grid Layout for Two Columns */}
@@ -120,9 +128,15 @@ export default function Layout() {  // Removed `children` prop here
 
           {/* Awards Section */}
           <Box sx={{ marginTop: 4 }}>
-            <Typography variant="h4" component="h1" gutterBottom>
-              Awards
-            </Typography>
+          <Typography 
+            variant="h4" 
+            component="h1" 
+            gutterBottom 
+            sx={{ display: "flex", alignItems: "center", gap: 1 }}
+          >
+            Awards
+            <EmojiEventsIcon sx={{ fontSize: 32, color: "#1c375d" }} />
+          </Typography>
 
             <Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
               Valerie Kuehne Undergraduate Research Award

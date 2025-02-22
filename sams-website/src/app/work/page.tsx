@@ -5,6 +5,10 @@ import { CssBaseline, Container, Typography, Box, Link, useMediaQuery } from "@m
 import { useTheme } from "@mui/material/styles";
 import Header from "../../components/Header";
 import NavigationDrawer from "../../components/NavigationDrawer";
+import CodeIcon from "@mui/icons-material/Code";
+import BugReportIcon from "@mui/icons-material/BugReport";
+import SchoolIcon from "@mui/icons-material/School";
+
 
 export default function Page() {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -60,24 +64,32 @@ export default function Page() {
           {/* All your content goes here */}
           <Box>
           <Typography 
-                      variant="h4" 
-                      component="h1" 
-                      gutterBottom 
-                      sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}
-                    >
+            variant="h4" 
+            component="h1" 
+            gutterBottom 
+            sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}
+          >
             Work Experience
-            <Link href="/contact" >
+
+            <Link href="/contact">
               <Typography variant="h6" component="span">
                 Contact Me
               </Typography>
             </Link>
           </Typography>
+
           
           <hr style={{ margin: "20px 0", borderColor: "#ccc" }} />
 
-          <Typography variant="h5" component="h1" gutterBottom>
-              Tekla API Developer
-            </Typography>
+          <Typography
+            variant="h5"
+            component="h1"
+            gutterBottom
+            sx={{ display: "flex", alignItems: "center", gap: 1 }}
+          >
+            Tekla API Developer
+            <CodeIcon sx={{ fontSize: 28, color: "#1c375d" }} />
+          </Typography>
             <Typography variant="h6" component="h1" gutterBottom>
               Exact Detailing, Victoria, May 2024 - Aug 2024
             </Typography>
@@ -99,8 +111,14 @@ export default function Page() {
 
             <hr style={{ margin: "20px 0", borderColor: "#ccc" }} />
 
-            <Typography variant="h5" component="h1" gutterBottom>
+            <Typography
+              variant="h5"
+              component="h1"
+              gutterBottom
+              sx={{ display: "flex", alignItems: "center", gap: 1 }}
+            >
               Quality Assurance Automation Developer
+              <BugReportIcon sx={{ fontSize: 28, color: "#1c375d" }} />
             </Typography>
             <Typography variant="h6" component="h1" gutterBottom>
               Jostle Corporation, Vancouver, January 2023 - August 2023
@@ -124,8 +142,14 @@ export default function Page() {
             </Typography>
             <hr style={{ margin: "20px 0", borderColor: "#ccc" }} />
 
-            <Typography variant="h5" component="h1" gutterBottom>
+            <Typography
+              variant="h5"
+              component="h1"
+              gutterBottom
+              sx={{ display: "flex", alignItems: "center", gap: 1 }}
+            >
                 Software Intern
+                <SchoolIcon sx={{ fontSize: 28, color: "#1c375d" }} />
             </Typography>
             <Typography variant="h6" component="h1" gutterBottom>
               University of Victoria, Victoria, May 2022 - August 2022
