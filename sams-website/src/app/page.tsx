@@ -104,6 +104,21 @@ const Page = () => {
               mt: 2,
               color: "white",
               textShadow: "1px 1px 2px rgba(0, 0, 0, 0.7)",
+              maxWidth: { xs: "95%", md: "100%" },
+            }}
+          >
+            <Link href="/contact" color="inherit">Contact Me</Link>
+          </Typography>
+          <Typography
+            variant="body1"
+            component="p"
+            sx={{
+              fontFamily: "'Roboto', sans-serif",
+              fontSize: "24px",
+              lineHeight: 1.8,
+              mt: 2,
+              color: "white",
+              textShadow: "1px 1px 2px rgba(0, 0, 0, 0.7)",
               maxWidth: { xs: "40%", md: "100%" },
             }}
           >
@@ -155,7 +170,7 @@ const Page = () => {
               p: 3,
               borderRadius: 2,
               boxShadow: 3,
-              maxWidth: { xs: "100%", md: "40%" }, // Keeping the original maxWidth
+              maxWidth: { xs: "95%", md: "40%" }, // Keeping the original maxWidth
               color: "black", // Ensuring readable text
             }}
           >
@@ -184,7 +199,7 @@ const Page = () => {
               mt: 2,
               color: "white",
               textShadow: "1px 1px 2px rgba(0, 0, 0, 0.7)",
-              maxWidth: { xs: "100%", md: "100%" },
+              maxWidth: { xs: "95%", md: "100%" },
             }}
           >
             <strong>Projects</strong>
@@ -195,7 +210,7 @@ const Page = () => {
               p: 3,
               borderRadius: 2,
               boxShadow: 3,
-              maxWidth: { xs: "100%", md: "95%" }, // Keeping the original maxWidth
+              maxWidth: { xs: "95%", md: "95%" }, // Keeping the original maxWidth
               color: "black", // Ensuring readable text
             }}
           >
@@ -228,7 +243,7 @@ const Page = () => {
               mt: 2,
               color: "white",
               textShadow: "1px 1px 2px rgba(0, 0, 0, 0.7)",
-              maxWidth: { xs: "100%", md: "100%" },
+              maxWidth: { xs: "95%", md: "100%" },
             }}
           >
             <strong>Technologies and Tools</strong>
@@ -239,7 +254,7 @@ const Page = () => {
               p: 3,
               borderRadius: 2,
               boxShadow: 3,
-              maxWidth: { xs: "100%", md: "95%" }, // Keeping the original maxWidth
+              maxWidth: { xs: "95%", md: "95%" }, // Keeping the original maxWidth
               color: "black", // Ensuring readable text
             }}
           >
@@ -274,7 +289,7 @@ const Page = () => {
               mt: 2,
               color: "white",
               textShadow: "1px 1px 2px rgba(0, 0, 0, 0.7)",
-              maxWidth: { xs: "100%", md: "100%" },
+              maxWidth: { xs: "95%", md: "100%" },
             }}
           >
             <strong>Interests</strong>
@@ -285,9 +300,10 @@ const Page = () => {
               p: 3,
               borderRadius: 2,
               boxShadow: 3,
-              maxWidth: { xs: "100%", md: "95%" }, // Keeping the original maxWidth
+              maxWidth: { xs: "95%", md: "95%" }, // Keeping the original maxWidth
               color: "black", // Ensuring readable text
               mt: 2,
+              mb: 2,
             }}
           >
             <Typography
