@@ -94,50 +94,216 @@ const Page = () => {
             <br />
             ENGINEER
           </Typography>
+          <Typography
+            variant="body1"
+            component="p"
+            sx={{
+              fontFamily: "'Roboto', sans-serif",
+              fontSize: "24px",
+              lineHeight: 1.8,
+              mt: 2,
+              color: "white",
+              textShadow: "1px 1px 2px rgba(0, 0, 0, 0.7)",
+              maxWidth: { xs: "40%", md: "100%" },
+            }}
+          >
+            <strong>Education</strong>
+          </Typography>
+          <Box
+  sx={{
+    backgroundColor: "white",
+    p: 3,
+    borderRadius: 2,
+    boxShadow: 3,
+    maxWidth: { xs: "40%", md: "40%" }, // Adjust width for better readability
+    color: "black", // Set text color to black for contrast
+    mt: 0,
+  }}
+>
+  <Typography
+    variant="body1"
+    component="p"
+    sx={{
+      fontFamily: "'Roboto', sans-serif",
+      fontSize: "18px",
+      lineHeight: 1.8,
+    }}
+  >
+    Bachelor of Software Engineering student at the University of Victoria with a 90% GPA, multiple academic scholarships, and research
+    experience in automated feedback systems for students.
+  </Typography>
+</Box>
 
           <Typography
             variant="body1"
             component="p"
             sx={{
               fontFamily: "'Roboto', sans-serif",
-              fontSize: "18px",
+              fontSize: "24px",
               lineHeight: 1.8,
               mt: 2,
               color: "white",
               textShadow: "1px 1px 2px rgba(0, 0, 0, 0.7)",
-              maxWidth: { xs: "70%", md: "40%" },
-              padding: { xs: 2, md: 0 },
+              maxWidth: { xs: "40%", md: "100%" },
             }}
           >
-            Passionate about building efficient and innovative software solutions.
-            Experienced in a range of programming languages, frameworks, and DevOps tools. Check out my <Link href="/projects">projects</Link>, <Link href="/work">work experience</Link>, or <Link href="/interests">interests</Link> to learn more about me!
-            <br />
+            <strong>Work Experience</strong>
           </Typography>
+          <Box
+            sx={{
+              backgroundColor: "white",
+              p: 3,
+              borderRadius: 2,
+              boxShadow: 3,
+              maxWidth: { xs: "100%", md: "40%" }, // Keeping the original maxWidth
+              color: "black", // Ensuring readable text
+            }}
+          >
+            <Typography
+              variant="body1"
+              component="p"
+              sx={{
+                fontFamily: "'Roboto', sans-serif",
+                fontSize: "18px",
+                lineHeight: 1.8,
+                color: "black", // Adjusting text color for contrast
+                textShadow: "none", // Removing shadow for better readability
+              }}
+            >
+              Experience in development with Tekla Open API, testing automation, and research-driven solutions. Skilled in C#, Java, and web automation frameworks.
+            </Typography>
+          </Box>
+
           <Typography
             variant="body1"
             component="p"
             sx={{
               fontFamily: "'Roboto', sans-serif",
-              fontSize: "18px",
+              fontSize: "24px",
               lineHeight: 1.8,
               mt: 2,
               color: "white",
               textShadow: "1px 1px 2px rgba(0, 0, 0, 0.7)",
-              maxWidth: { xs: "100%", md: "40%" },
-              padding: { xs: 2, md: 0 },
+              maxWidth: { xs: "100%", md: "100%" },
             }}
           >
-            <strong>Want to see all of the tools I have used and languages I know? Visit <Link href="/techtools">technologies and tools</Link> for more! </strong>
-            <br />
-            <strong>Languages:</strong> C, C#, Java, JavaScript, TypeScript, Python, Perl, R, and more.
-            <br />
-            <strong>Databases:</strong> PostgreSQL, SQLite.
-            <br />
-            <strong>Frameworks:</strong> React, Next.js, Spring, .NET, WPF and more.
-            <br />
-            <strong>DevOps & Tools:</strong> Docker, Git, Jenkins, Selenium, Ansible, and JUnit.
-            <br />
+            <strong>Projects</strong>
           </Typography>
+          <Box
+            sx={{
+              backgroundColor: "white",
+              p: 3,
+              borderRadius: 2,
+              boxShadow: 3,
+              maxWidth: { xs: "100%", md: "95%" }, // Keeping the original maxWidth
+              color: "black", // Ensuring readable text
+            }}
+          >
+            <Typography
+              variant="body1"
+              component="p"
+              sx={{
+                fontFamily: "'Roboto', sans-serif",
+                fontSize: "18px",
+                lineHeight: 1.8,
+                color: "black", // Adjusting text color for contrast
+                textShadow: "none", // Removing shadow for better readability
+              }}
+            >
+              <strong>WAVTool:</strong> Co-developed at Exact Detailing. Allows users to better plan steel weld planning in steel fabrication using the AGT BeamMaster. 
+              <br />
+              <strong>VirtualER:</strong> Web-based application that allows patients to easily find wait times of nearby emergency rooms to meet their medical needs. 
+              <br />
+              <strong>Automated Feedback for Engineering:</strong> Performed joint research into frequent student mistakes and developed automated feedback for homework problems. This included generating graphs and automated feedback messages.
+            </Typography>
+          </Box>
+
+          <Typography
+            variant="body1"
+            component="p"
+            sx={{
+              fontFamily: "'Roboto', sans-serif",
+              fontSize: "24px",
+              lineHeight: 1.8,
+              mt: 2,
+              color: "white",
+              textShadow: "1px 1px 2px rgba(0, 0, 0, 0.7)",
+              maxWidth: { xs: "100%", md: "100%" },
+            }}
+          >
+            <strong>Technologies and Tools</strong>
+          </Typography>
+          <Box
+            sx={{
+              backgroundColor: "white",
+              p: 3,
+              borderRadius: 2,
+              boxShadow: 3,
+              maxWidth: { xs: "100%", md: "95%" }, // Keeping the original maxWidth
+              color: "black", // Ensuring readable text
+            }}
+          >
+            <Typography
+              variant="body1"
+              component="p"
+              sx={{
+                fontFamily: "'Roboto', sans-serif",
+                fontSize: "18px",
+                lineHeight: 1.8,
+                color: "black", // Adjusting text color for contrast
+                textShadow: "none", // Removing shadow for better readability
+              }}
+            >
+              <strong>Languages:</strong> C, C#, Java, JavaScript, TypeScript, Python, Perl, R, and more.
+              <br />
+              <strong>Databases:</strong> PostgreSQL, SQLite.
+              <br />
+              <strong>Frameworks:</strong> React, Next.js, Spring, .NET, WPF, and more.
+              <br />
+              <strong>DevOps & Tools:</strong> Docker, Git, Jenkins, Selenium, Ansible, and JUnit.
+              <br />
+            </Typography>
+          </Box>
+          <Typography
+            variant="body1"
+            component="p"
+            sx={{
+              fontFamily: "'Roboto', sans-serif",
+              fontSize: "24px",
+              lineHeight: 1.8,
+              mt: 2,
+              color: "white",
+              textShadow: "1px 1px 2px rgba(0, 0, 0, 0.7)",
+              maxWidth: { xs: "100%", md: "100%" },
+            }}
+          >
+            <strong>Interests</strong>
+          </Typography>
+          <Box
+            sx={{
+              backgroundColor: "white",
+              p: 3,
+              borderRadius: 2,
+              boxShadow: 3,
+              maxWidth: { xs: "100%", md: "95%" }, // Keeping the original maxWidth
+              color: "black", // Ensuring readable text
+              mt: 2,
+            }}
+          >
+            <Typography
+              variant="body1"
+              component="p"
+              sx={{
+                fontFamily: "'Roboto', sans-serif",
+                fontSize: "18px",
+                lineHeight: 1.8,
+                color: "black", // Adjusting text color for contrast
+                textShadow: "none", // Removing shadow for better readability
+              }}
+            >
+              In my free time I love playing basketball, hiking, paddling, traveling, and learning about dinosaurs! Learn more on my <Link href="/interests">interests page</Link>.
+            </Typography>
+          </Box>
         </Box>
       </Box>
     </>
