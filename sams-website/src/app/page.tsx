@@ -145,7 +145,7 @@ const Page = () => {
     }}
   >
     Bachelor of Software Engineering student at the University of Victoria with a 90% GPA, multiple academic scholarships, and research
-    experience in automated feedback systems for students.
+    experience in automated feedback systems for students. <Link href="/education">Learn more</Link>    
   </Typography>
 </Box>
 
@@ -159,7 +159,7 @@ const Page = () => {
               mt: 2,
               color: "white",
               textShadow: "1px 1px 2px rgba(0, 0, 0, 0.7)",
-              maxWidth: { xs: "40%", md: "100%" },
+              maxWidth: { xs: "100%", md: "100%" },
             }}
           >
             <strong>Work Experience</strong>
@@ -185,7 +185,8 @@ const Page = () => {
                 textShadow: "none", // Removing shadow for better readability
               }}
             >
-              Experience in development with Tekla Open API, testing automation, and research-driven solutions. Skilled in C#, Java, and web automation frameworks.
+              Experience in development with Tekla Open API, testing automation, and research-driven solutions. 
+              Skilled in C#, Java, and web automation frameworks. <Link href="/work">Learn more</Link>  
             </Typography>
           </Box>
 
@@ -230,6 +231,8 @@ const Page = () => {
               <strong>VirtualER:</strong> Web-based application that allows patients to easily find wait times of nearby emergency rooms to meet their medical needs. 
               <br />
               <strong>Automated Feedback for Engineering:</strong> Performed joint research into frequent student mistakes and developed automated feedback for homework problems. This included generating graphs and automated feedback messages.
+              <br/>
+              Check out my <Link href="/projects">other projects</Link>!  
             </Typography>
           </Box>
 
@@ -277,6 +280,7 @@ const Page = () => {
               <br />
               <strong>DevOps & Tools:</strong> Docker, Git, Jenkins, Selenium, Ansible, and JUnit.
               <br />
+              Check out all of the technologies I use in my projects and in the workplace <Link href="/techtools">here</Link>!
             </Typography>
           </Box>
           <Typography
