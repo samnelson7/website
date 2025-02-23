@@ -197,7 +197,7 @@ export default function TechToolsPage() {
           backgroundPosition: "center",
           color: "white",
           minHeight: "100vh",
-          width: "100vw",
+          width: "100%",
           padding: { xs: 2, md: 6 },
         }}
       >
