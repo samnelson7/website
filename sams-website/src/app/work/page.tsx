@@ -71,8 +71,13 @@ export default function Page() {
           >
             <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}
             >
-            <WorkIcon sx={{ fontSize: 28, color: "#black" }} />
-            <strong> Work Experience</strong> 
+            <WorkIcon sx={{ fontSize: 28, color: "black" }} />
+            <Typography variant="h4" sx={{ display: { xs: "block", md: "none" }, fontWeight: "bold" }}>
+              Work
+            </Typography>
+            <Typography variant="h4" sx={{ display: { xs: "none", md: "block" }, fontWeight: "bold" }}>
+              Work Experience
+            </Typography>
             </Box>
             <Link href="/contact">
               <Typography variant="body1" component="span">
