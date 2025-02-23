@@ -95,19 +95,54 @@ export default function Page() {
             <Typography variant="h6" component="h1" gutterBottom>
               Exact Detailing, Victoria, May 2024 - Aug 2024
             </Typography>
-            <Typography variant="body2" component="h1" gutterBottom>
+            <Typography variant="body2" component="h1" gutterBottom sx={{
+              wordWrap: "break-word",
+              maxWidth: "80%",
+              whiteSpace: "pre-line", 
+              textIndent: "-0.8em",
+              paddingLeft: "1em", 
+              display: "block",
+            }}>
               ▪ Co-developed the <Link href="/projects">WAVTool</Link> (Weld Access Verification Tool), a collaboration with AGT Robotics, enabling users to visualize the accessibility of welds for robotic welders, now available on Tekla Warehouse
             </Typography>
-            <Typography variant="body2" component="h1" gutterBottom>
+            <Typography variant="body2" component="h1" gutterBottom sx={{
+              wordWrap: "break-word",
+              maxWidth: "80%",
+              whiteSpace: "pre-line", 
+              textIndent: "-0.8em",
+              paddingLeft: "1em", 
+              display: "block",
+            }}>
               ▪ Led development on the Clash Checker, a plugin to streamline the management of clashing steel parts, enabling task assignment and tracking which facilitated easier collaboration
             </Typography>
-            <Typography variant="body2" gutterBottom sx={{ maxWidth: "80%", wordWrap: "break-word" }}>
+            <Typography variant="body2" gutterBottom sx={{
+              wordWrap: "break-word",
+              maxWidth: "80%",
+              whiteSpace: "pre-line", 
+              textIndent: "-0.8em",
+              paddingLeft: "1em", 
+              display: "block",
+            }}>
               ▪ Collaborated with industry professionals to identify business objectives and design solutions that directly addressed productivity challenges
             </Typography>
-            <Typography variant="body2" gutterBottom sx={{ maxWidth: "80%", wordWrap: "break-word" }}>
+            <Typography variant="body2" gutterBottom sx={{
+              wordWrap: "break-word",
+              maxWidth: "80%",
+              whiteSpace: "pre-line", 
+              textIndent: "-0.8em",
+              paddingLeft: "1em", 
+              display: "block",
+            }}>
               ▪ Assisted in codebase maintenance, engaging with legacy code, and creating comprehensive documentation to support future developers and co-op students within the company
             </Typography>
-            <Typography variant="body2" gutterBottom sx={{ maxWidth: "80%", wordWrap: "break-word" }}>
+            <Typography variant="body2" gutterBottom sx={{
+              wordWrap: "break-word",
+              maxWidth: "80%",
+              whiteSpace: "pre-line", 
+              textIndent: "-0.8em",
+              paddingLeft: "1em", 
+              display: "block",
+            }}>
               ▪ Developed user-friendly tools using C#, Windows Forms, and WPF to streamline complex, repetitive tasks, improving workflow efficiency for detailers
             </Typography>
 
@@ -124,20 +159,55 @@ export default function Page() {
             <Typography variant="h6" component="h1" gutterBottom>
               Jostle Corporation, Vancouver, January 2023 - August 2023
             </Typography>
-            <Typography variant="body2" gutterBottom sx={{ maxWidth: "80%", wordWrap: "break-word" }}>
+            <Typography variant="body2" gutterBottom sx={{
+              wordWrap: "break-word",
+              maxWidth: "80%",
+              whiteSpace: "pre-line", 
+              textIndent: "-0.8em",
+              paddingLeft: "1em", 
+              display: "block",
+            }}>
               ▪ Led group testing sessions to collaboratively identify and resolve issues across many platforms which ensured comprehensive coverage of the web application across diverse environments
             </Typography>
-            <Typography variant="body2" gutterBottom sx={{ maxWidth: "80%", wordWrap: "break-word" }}>
+            <Typography variant="body2" gutterBottom sx={{
+              wordWrap: "break-word",
+              maxWidth: "80%",
+              whiteSpace: "pre-line", 
+              textIndent: "-0.8em",
+              paddingLeft: "1em", 
+              display: "block",
+            }}>
               ▪ Collaborated with a small team to update a large test suite to improve coverage while undergoing a large shift in technologies
             </Typography>
-            <Typography variant="body2" gutterBottom sx={{ maxWidth: "80%", wordWrap: "break-word" }}>
+            <Typography variant="body2" gutterBottom sx={{
+              wordWrap: "break-word",
+              maxWidth: "80%",
+              whiteSpace: "pre-line", 
+              textIndent: "-0.8em",
+              paddingLeft: "1em", 
+              display: "block",
+            }}>
               ▪ Utilised Jenkins and Red Hat tools to streamline release processes ensuring reliable software deployments
             </Typography>
-            <Typography variant="body2" gutterBottom sx={{ maxWidth: "80%", wordWrap: "break-word" }}>
+            <Typography variant="body2" gutterBottom sx={{
+              wordWrap: "break-word",
+              maxWidth: "80%",
+              whiteSpace: "pre-line", 
+              textIndent: "-0.8em",
+              paddingLeft: "1em", 
+              display: "block",
+            }}>
               ▪ Developed and maintained Selenium automation tests in Java to validate the integrity of web applications
             </Typography>
             <Typography variant="body2" component="h1" gutterBottom>
-            <Typography variant="body2" gutterBottom sx={{ maxWidth: "80%", wordWrap: "break-word" }}>
+            <Typography variant="body2" gutterBottom sx={{
+              wordWrap: "break-word",
+              maxWidth: "80%",
+              whiteSpace: "pre-line", 
+              textIndent: "-0.8em",
+              paddingLeft: "1em", 
+              display: "block",
+            }}>
               ▪ Wrote and executed automation test plans alongside the rollout of new features to ensure that no bugs were pushed to customers
             </Typography>
             </Typography>
@@ -154,19 +224,54 @@ export default function Page() {
             <Typography variant="h6" component="h1" gutterBottom>
               University of Victoria, Victoria, May 2022 - August 2022
             </Typography>
-            <Typography variant="body2" gutterBottom sx={{ maxWidth: "80%", wordWrap: "break-word" }}>
+            <Typography variant="body2" gutterBottom sx={{
+              wordWrap: "break-word",
+              maxWidth: "80%",
+              whiteSpace: "pre-line", 
+              textIndent: "-0.8em",
+              paddingLeft: "1em", 
+              display: "block",
+            }}>
               ▪ Created a solution that provided unique automated responses based on a variety of student inputs
             </Typography>
-            <Typography variant="body2" gutterBottom sx={{ maxWidth: "80%", wordWrap: "break-word" }}>
+            <Typography variant="body2" gutterBottom sx={{
+              wordWrap: "break-word",
+              maxWidth: "80%",
+              whiteSpace: "pre-line", 
+              textIndent: "-0.8em",
+              paddingLeft: "1em", 
+              display: "block",
+            }}>
               ▪ Worked remotely and independently on generating automated feedback responses to develop an innovative software solution to bring a professor’s idea to life
             </Typography>
-            <Typography variant="body2" gutterBottom sx={{ maxWidth: "80%", wordWrap: "break-word" }}>
+            <Typography variant="body2" gutterBottom sx={{
+              wordWrap: "break-word",
+              maxWidth: "80%",
+              whiteSpace: "pre-line", 
+              textIndent: "-0.8em",
+              paddingLeft: "1em", 
+              display: "block",
+            }}>
               ▪ Sought feedback from the design community and applied industry best practices which resulted in improved code for this specific technical solution
             </Typography>
-            <Typography variant="body2" gutterBottom sx={{ maxWidth: "80%", wordWrap: "break-word" }}>
+            <Typography variant="body2" gutterBottom sx={{
+              wordWrap: "break-word",
+              maxWidth: "80%",
+              whiteSpace: "pre-line", 
+              textIndent: "-0.8em",
+              paddingLeft: "1em", 
+              display: "block",
+            }}>
               ▪ Presented my research on an innovative <Link href="/projects">automated feedback solution</Link> showcasing its effectiveness in addressing student difficulties to peers, faculty, and research partners
             </Typography>
-            <Typography variant="body2" gutterBottom sx={{ maxWidth: "80%", wordWrap: "break-word" }}>
+            <Typography variant="body2" gutterBottom sx={{
+              wordWrap: "break-word",
+              maxWidth: "80%",
+              whiteSpace: "pre-line", 
+              textIndent: "-0.8em",
+              paddingLeft: "1em", 
+              display: "block",
+            }}>
               ▪ Conducted research to determine common difficulties for students resulting in more direct and specific feedback
             </Typography>
           </Box>
