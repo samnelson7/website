@@ -8,6 +8,9 @@ import EmailIcon from "@mui/icons-material/Email";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle"; // Green checkmark
 import Header from "../../components/Header";
 import NavigationDrawer from "../../components/NavigationDrawer";
+import {
+  ContactMail as ContactMailIcon,
+} from "@mui/icons-material";
 
 export default function Layout() {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -44,7 +47,11 @@ export default function Layout() {
       <Container maxWidth={false} sx={{ mt: 4 }}>
         <Box sx={{ width: "100%", padding: 2 }}>
           <Typography variant="h4" component="h1" gutterBottom>
+          <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}
+            >
+            <ContactMailIcon sx={{ fontSize: 28, color: "black" }} />
             Contact Me
+            </Box>
           </Typography>
           <Typography variant="body1" gutterBottom>
             Feel free to connect with me through one of the following platforms:

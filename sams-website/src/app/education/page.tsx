@@ -6,8 +6,6 @@ import { useTheme } from "@mui/material/styles";
 import Header from "../../components/Header";
 import NavigationDrawer from "../../components/NavigationDrawer";
 import SchoolIcon from "@mui/icons-material/School";
-import MenuBookIcon from "@mui/icons-material/MenuBook";
-import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 
 export default function Layout() {  // Removed `children` prop here
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -68,11 +66,12 @@ export default function Layout() {  // Removed `children` prop here
             sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}
           >
             <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+            <SchoolIcon sx={{ fontSize: 32, color: "black" }} />
               Education
-              <SchoolIcon sx={{ fontSize: 32, color: "#1c375d" }} />
+              
             </Box>
             <Link href="/contact" >
-              <Typography variant="h6" component="span">
+              <Typography variant="body1" component="span">
                 Contact Me
               </Typography>
             </Link>
@@ -97,7 +96,6 @@ export default function Layout() {  // Removed `children` prop here
             <Typography variant="h4" component="h1" gutterBottom
             sx={{ display: "flex", alignItems: "center", gap: 1 }}>
               Relevant Coursework
-              <MenuBookIcon sx={{ fontSize: 32, color: "#1c375d" }} />
             </Typography>
 
             {/* Grid Layout for Two Columns */}
@@ -135,7 +133,6 @@ export default function Layout() {  // Removed `children` prop here
             sx={{ display: "flex", alignItems: "center", gap: 1 }}
           >
             Awards
-            <EmojiEventsIcon sx={{ fontSize: 32, color: "#1c375d" }} />
           </Typography>
 
             <Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>

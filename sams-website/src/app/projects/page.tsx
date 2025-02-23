@@ -7,6 +7,9 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Header from "../../components/Header";
 import NavigationDrawer from "../../components/NavigationDrawer";
 import CloseIcon from "@mui/icons-material/Close";
+import {
+  Assignment as AssignmentIcon,
+} from "@mui/icons-material";
 
 interface Project {
   title: string;
@@ -138,9 +141,13 @@ export default function ProjectsPage() {
             gutterBottom 
             sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" , marginRight: "20px",marginLeft: "20px", marginTop: "20px"}}
           >
-            Projects
+            <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}
+                        >
+                        <AssignmentIcon sx={{ fontSize: 28, color: "black" }} />
+                        Projects
+                        </Box>
             <Link href="/contact" >
-              <Typography variant="h6" component="span">
+              <Typography variant="body1" component="span">
                 Contact Me
               </Typography>
             </Link>

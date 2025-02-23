@@ -3,10 +3,13 @@
 "use client";
 
 import React from "react";
-import { CssBaseline, Container, Typography, Box, Grid, Dialog, DialogActions, DialogContent, DialogTitle, Button, Link } from "@mui/material";
+import { CssBaseline, Container, Typography, Box, Grid, Dialog, DialogActions, DialogContent, DialogTitle, Button, Link, Avatar } from "@mui/material";
 import Header from "../../components/Header";
 import NavigationDrawer from "../../components/NavigationDrawer";
 import Image from "next/image";
+import {
+  Build as BuildIcon,
+} from "@mui/icons-material";
 
 export default function TechToolsPage() {
   const [drawerOpen, setDrawerOpen] = React.useState(false);
@@ -31,7 +34,7 @@ export default function TechToolsPage() {
   const sections = {
     Contact:[
       {name: "Contact Me",
-        icon: <Image src="/images/profile.JPG" alt="Profile Picture" width={50} height={50} />,
+        icon: <Avatar src="/images/profile.JPG" alt="Profile Picture" sx={{width: 50, height: 50}} />,
       }
     ],
     Languages: [
@@ -200,7 +203,11 @@ export default function TechToolsPage() {
       >
         <Box sx={{ width: { xs: "100%", md: "60%" }, padding: 2 }}>
           <Typography variant="h4" component="h1" gutterBottom>
+          <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}
+            >
+            <BuildIcon sx={{ fontSize: 28, color: "white" }} />
             Technology and Tools
+            </Box>
           </Typography>
           <Typography variant="body1" gutterBottom>
             Explore the programming languages, databases, frameworks, and tools I frequently use:

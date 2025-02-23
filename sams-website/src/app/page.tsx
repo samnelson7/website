@@ -145,7 +145,7 @@ const Page = () => {
     }}
   >
     Bachelor of Software Engineering student at the University of Victoria with a 90% GPA, multiple academic scholarships, and research
-    experience in automated feedback systems for students. <Link href="/education">Learn more</Link>    
+    experience in automated feedback systems for students. Learn more <Link href="/education">here</Link>.
   </Typography>
 </Box>
 
@@ -186,7 +186,7 @@ const Page = () => {
               }}
             >
               Experience in development with Tekla Open API, testing automation, and research-driven solutions. 
-              Skilled in C#, Java, and web automation frameworks. <Link href="/work">Learn more</Link>  
+              Skilled in C#, Java, and web automation frameworks. Learn more <Link href="/work">here</Link>.
             </Typography>
           </Box>
 

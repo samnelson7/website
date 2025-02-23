@@ -6,6 +6,9 @@ import ZoomInIcon from "@mui/icons-material/ZoomIn";
 import Header from "../../components/Header";
 import NavigationDrawer from "../../components/NavigationDrawer";
 import CloseIcon from "@mui/icons-material/Close";
+import {
+  Interests as InterestsIcon,
+} from "@mui/icons-material";
 
 interface Interest {
   title: string;
@@ -100,18 +103,22 @@ export default function InterestsPage() {
         {/* Main Content */}
         <Box sx={{ flex: 1, marginLeft: "10%", marginRight: "10%", padding: "20px" }}>
         <Typography 
-                              variant="h4" 
-                              component="h1" 
-                              gutterBottom 
-                              sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}
-                            >
-                    Interests
-                    <Link href="/contact" >
-                      <Typography variant="h6" component="span">
-                        Contact Me
-                      </Typography>
-                    </Link>
-                  </Typography>
+          variant="h4" 
+          component="h1" 
+          gutterBottom 
+          sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}
+        >
+          <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}
+          >
+          <InterestsIcon sx={{ fontSize: 28, color: "black" }} />
+          Interests
+          </Box>
+          <Link href="/contact" >
+            <Typography variant="body1" component="span">
+              Contact Me
+            </Typography>
+          </Link>
+        </Typography>
         <hr style={{ margin: "20px 0", borderColor: "#ccc" }} />
 
         {Interests.map((Interest, index) => (

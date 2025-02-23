@@ -5,9 +5,9 @@ import { CssBaseline, Container, Typography, Box, Link, useMediaQuery } from "@m
 import { useTheme } from "@mui/material/styles";
 import Header from "../../components/Header";
 import NavigationDrawer from "../../components/NavigationDrawer";
-import CodeIcon from "@mui/icons-material/Code";
-import BugReportIcon from "@mui/icons-material/BugReport";
-import SchoolIcon from "@mui/icons-material/School";
+import {
+  Work as WorkIcon,
+} from "@mui/icons-material";
 
 
 export default function Page() {
@@ -69,10 +69,13 @@ export default function Page() {
             gutterBottom 
             sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}
           >
+            <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}
+            >
+            <WorkIcon sx={{ fontSize: 28, color: "#black" }} />
             Work Experience
-
+            </Box>
             <Link href="/contact">
-              <Typography variant="h6" component="span">
+              <Typography variant="body1" component="span">
                 Contact Me
               </Typography>
             </Link>
@@ -88,7 +91,6 @@ export default function Page() {
             sx={{ display: "flex", alignItems: "center", gap: 1 }}
           >
             Tekla API Developer
-            <CodeIcon sx={{ fontSize: 28, color: "#1c375d" }} />
           </Typography>
             <Typography variant="h6" component="h1" gutterBottom>
               Exact Detailing, Victoria, May 2024 - Aug 2024
@@ -118,7 +120,6 @@ export default function Page() {
               sx={{ display: "flex", alignItems: "center", gap: 1 }}
             >
               Quality Assurance Automation Developer
-              <BugReportIcon sx={{ fontSize: 28, color: "#1c375d" }} />
             </Typography>
             <Typography variant="h6" component="h1" gutterBottom>
               Jostle Corporation, Vancouver, January 2023 - August 2023
@@ -149,7 +150,6 @@ export default function Page() {
               sx={{ display: "flex", alignItems: "center", gap: 1 }}
             >
                 Software Intern
-                <SchoolIcon sx={{ fontSize: 28, color: "#1c375d" }} />
             </Typography>
             <Typography variant="h6" component="h1" gutterBottom>
               University of Victoria, Victoria, May 2022 - August 2022
