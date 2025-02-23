@@ -111,7 +111,7 @@ export default function Layout() {  // Removed `children` prop here
   {/* Right Side: Image */}
   <Box 
     component="img" 
-    src="/images/UVIC.jpg" 
+    src="/images/UVIC.JPG" 
     alt="University Logo" 
     sx={{ 
       height: "100%", 
