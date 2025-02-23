@@ -77,18 +77,52 @@ export default function Layout() {  // Removed `children` prop here
             </Link>
           </Typography>
 
-            <Typography variant="h6" component="h2" gutterBottom>
-              Bachelor of Software Engineering
-            </Typography>
-            <Typography variant="body1" gutterBottom>
-              University of Victoria (2021-2026)
-            </Typography>
-            <Typography variant="body2" gutterBottom>
-              ▪ High achieving student with a 90% GPA
-            </Typography>
-            <Typography variant="body2" gutterBottom>
-              ▪ Performed joint research on generating automated feedback to improve student outcomes. Check out <Link href="/projects">Automated Feedback for Engineering</Link> in my projects!
-            </Typography>
+          <Box 
+  sx={{ 
+    display: "flex", 
+    alignItems: "stretch", 
+    justifyContent: "space-between", 
+    gap: 3, 
+  }}
+>
+  {/* Left Side: Text Content */}
+  <Box sx={{ flex: 1 }}>
+    <Typography variant="h6" component="h2" gutterBottom>
+      Bachelor of Software Engineering
+    </Typography>
+
+    <Typography variant="body1" gutterBottom>
+      University of Victoria (2021-2026)
+    </Typography>
+
+    <Typography variant="body2" gutterBottom>
+      ▪ High achieving student with a 90% GPA
+    </Typography>
+
+    <Typography variant="body2" gutterBottom sx={{ maxWidth: { xs: "50%", md: "70%" } }}>
+      ▪ Performed joint research on generating automated feedback to improve student outcomes. 
+    </Typography>
+    <Typography variant="body2" gutterBottom sx={{ maxWidth: { xs: "50%", md: "70%" } }}>
+      <br/>
+      Check out <Link href="/projects">Automated Feedback for Engineering</Link> in my projects!
+    </Typography>
+  </Box>
+
+  {/* Right Side: Image */}
+  <Box 
+    component="img" 
+    src="/images/UVIC.jpg" 
+    alt="University Logo" 
+    sx={{ 
+      height: "100%", 
+      width: "auto", 
+      display: {xs: "none", md: "block"},
+      maxHeight: 210, // Adjust based on your needs
+      alignSelf: "flex-start", // Aligns the top of the image with the top of the text
+    }} 
+  />
+</Box>
+
             <hr style={{ margin: "20px 0", borderColor: "#ccc" }} />
           </Box>
 
