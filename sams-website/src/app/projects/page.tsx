@@ -66,7 +66,7 @@ const projects: Project[] = [
     description: "This project involved building a robot as a prototype for an autonomous underwater vehicle able to position a debris cleaning device on top of underwater cameras and sensors. The task required of this robot was to locate a randomly placed infrared emitter in an enclosed space, approach it, and drop a ping-pong ball on top of it without it falling off. As can be seen in the image of our robot design, we have an arm that extends in front of the robot with gears that twist open to drop the ball on the target. I assisted with the electrical work, design, and overall construction of the robot, but my biggest contribution was designing a finite state machine for our workflow and implementing that in code. Our robot was one of few able to pass all tests consistently without hitting any walls or the target.",
     mediaUrl: "/images/Robot.jpg",
     mediaType: "image",
-    technologies: ["RobotC", "C"],
+    technologies: ["RobotC", "C", "Vex Robotics Kit"],
     maxTextHeight: 320,
   },
 ];

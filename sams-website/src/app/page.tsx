@@ -100,9 +100,9 @@ const Page = () => {
               p: 3,
               borderRadius: 2,
               boxShadow: 3,
-              maxWidth: { xs: "95%", sm: "95%", md: "80%", lg: "100%" }, 
+              maxWidth: { xs: "95%", sm: "95%", md: "95%", lg: "100%" }, 
               color: "black",
-              mt: { xs: 40, sm:40, md: 0 },
+              mt: { xs: 40, sm:40, md: 40, lg: 0 },
               mb: {xs:2, md:0},
             }}
           >
