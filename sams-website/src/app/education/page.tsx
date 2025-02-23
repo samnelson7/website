@@ -67,7 +67,7 @@ export default function Layout() {  // Removed `children` prop here
           >
             <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
             <SchoolIcon sx={{ fontSize: 32, color: "black" }} />
-              Education
+            <strong> Education</strong> 
               
             </Box>
             <Link href="/contact" >
@@ -88,11 +88,11 @@ export default function Layout() {  // Removed `children` prop here
   {/* Left Side: Text Content */}
   <Box sx={{ flex: 1 }}>
     <Typography variant="h6" component="h2" gutterBottom>
-      Bachelor of Software Engineering
+    <strong> Bachelor of Software Engineering</strong> 
     </Typography>
 
     <Typography variant="body1" gutterBottom>
-      University of Victoria (2021-2026)
+    <strong> University of Victoria (2021-2026)</strong> 
     </Typography>
 
     <Typography variant="body2" gutterBottom>
@@ -129,7 +129,7 @@ export default function Layout() {  // Removed `children` prop here
           <Box>
             <Typography variant="h4" component="h1" gutterBottom
             sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-              Relevant Coursework
+              <strong> Relevant Coursework</strong> 
             </Typography>
 
             {/* Grid Layout for Two Columns */}
@@ -166,53 +166,53 @@ export default function Layout() {  // Removed `children` prop here
             gutterBottom 
             sx={{ display: "flex", alignItems: "center", gap: 1 }}
           >
-            Awards
+            <strong> Awards</strong> 
           </Typography>
 
             <Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
-              Valerie Kuehne Undergraduate Research Award
+            <strong> Valerie Kuehne Undergraduate Research Award</strong> 
             </Typography>
             <Typography variant="body2" gutterBottom sx={{ marginBottom: 2 }}>
               ▪ Awarded for academic achievements and a proposal for joint research which led to the development of an <Link href="/projects">innovative software solution</Link> through the grant to create automated feedback responses based on diverse student inputs
             </Typography>
 
             <Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
-              UVic Excellence Scholarship
+            <strong> UVic Excellence Scholarship</strong> 
             </Typography>
             <Typography variant="body2" gutterBottom sx={{ marginBottom: 2 }}>
               ▪ Retained and upheld throughout degree based on a high GPA
             </Typography>
 
             <Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
-              Faculty of Engineering and Computer Science: Dean&apos;s Entrance Scholarship
+            <strong> Faculty of Engineering and Computer Science: Dean&apos;s Entrance Scholarship</strong> 
             </Typography>
             <Typography variant="body2" gutterBottom sx={{ marginBottom: 2 }}>
               ▪ Won based on exceptional academic achievement upon entering first year at UVic
             </Typography>
 
             <Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
-              Major W. Horan Memorial Scholarship
+            <strong> Major W. Horan Memorial Scholarship</strong> 
             </Typography>
             <Typography variant="body2" gutterBottom sx={{ marginBottom: 2 }}>
               ▪ Received for academic excellence upon entering first year at UVic
             </Typography>
 
             <Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
-              District/Authority Scholarship
+            <strong>  District/Authority Scholarship</strong> 
             </Typography>
             <Typography variant="body2" gutterBottom sx={{ marginBottom: 2 }}>
               ▪ Obtained for excellence in Physical Activity and Health, with recognition for volunteering, coaching, and active involvement in school and community sports programs
             </Typography>
 
             <Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
-              Ridge Meadows Soccer Club Scholarship
+            <strong> Ridge Meadows Soccer Club Scholarship</strong> 
             </Typography>
             <Typography variant="body2" gutterBottom sx={{ marginBottom: 2 }}>
               ▪ Granted for volunteer coaching, playing contributions, and references
             </Typography>
 
             <Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
-              Top Science/French Student
+            <strong> Top Science/French Student</strong> 
             </Typography>
             <Typography variant="body2" gutterBottom sx={{ marginBottom: 2 }}>
               ▪ Earned in high school for highest grades in Biology, Chemistry, and Physics combined, and in the French immersion program in a graduating class of 200

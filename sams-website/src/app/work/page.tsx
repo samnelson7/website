@@ -72,7 +72,7 @@ export default function Page() {
             <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}
             >
             <WorkIcon sx={{ fontSize: 28, color: "#black" }} />
-            Work Experience
+            <strong> Work Experience</strong> 
             </Box>
             <Link href="/contact">
               <Typography variant="body1" component="span">
@@ -90,7 +90,7 @@ export default function Page() {
             gutterBottom
             sx={{ display: "flex", alignItems: "center", gap: 1 }}
           >
-            Tekla API Developer
+            <strong> Tekla API Developer</strong> 
           </Typography>
             <Typography variant="h6" component="h1" gutterBottom>
               Exact Detailing, Victoria, May 2024 - Aug 2024
@@ -119,7 +119,7 @@ export default function Page() {
               gutterBottom
               sx={{ display: "flex", alignItems: "center", gap: 1 }}
             >
-              Quality Assurance Automation Developer
+              <strong> Quality Assurance Automation Developer</strong> 
             </Typography>
             <Typography variant="h6" component="h1" gutterBottom>
               Jostle Corporation, Vancouver, January 2023 - August 2023
@@ -149,7 +149,7 @@ export default function Page() {
               gutterBottom
               sx={{ display: "flex", alignItems: "center", gap: 1 }}
             >
-                Software Intern
+                <strong> Software Intern</strong> 
             </Typography>
             <Typography variant="h6" component="h1" gutterBottom>
               University of Victoria, Victoria, May 2022 - August 2022

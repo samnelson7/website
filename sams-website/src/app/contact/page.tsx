@@ -50,7 +50,7 @@ export default function Layout() {
           <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}
             >
             <ContactMailIcon sx={{ fontSize: 28, color: "black" }} />
-            Contact Me
+            <strong> Contact Me</strong> 
             </Box>
           </Typography>
           <Typography variant="body1" gutterBottom>

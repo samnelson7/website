@@ -102,7 +102,7 @@ const Page = () => {
               boxShadow: 3,
               maxWidth: { xs: "95%", sm: "95%", md: "95%", lg: "100%" }, 
               color: "black",
-              mt: { xs: 40, sm:40, md: 40, lg: 0 },
+              mt: { xs: 45, sm:45, md: 45, lg: 0 },
               mb: {xs:2, md:0},
             }}
           >

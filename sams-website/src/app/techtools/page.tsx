@@ -206,7 +206,7 @@ export default function TechToolsPage() {
           <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}
             >
             <BuildIcon sx={{ fontSize: 28, color: "white" }} />
-            Technology and Tools
+            <strong> Technology and Tools</strong> 
             </Box>
           </Typography>
           <Typography variant="body1" gutterBottom>
@@ -216,7 +216,7 @@ export default function TechToolsPage() {
           {Object.entries(sections).map(([sectionTitle, tools]) => (
   <Box key={sectionTitle} sx={{ mt: 4 }}>
     <Typography variant="h5" component="h2" gutterBottom>
-      {sectionTitle}
+    <strong> {sectionTitle}</strong> 
     </Typography>
 
     {sectionTitle !== "Contact" && (

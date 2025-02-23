@@ -111,7 +111,7 @@ export default function InterestsPage() {
           <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}
           >
           <InterestsIcon sx={{ fontSize: 28, color: "black" }} />
-          Interests
+          <strong> Interests </strong> 
           </Box>
           <Link href="/contact" >
             <Typography variant="body1" component="span">
@@ -136,10 +136,10 @@ export default function InterestsPage() {
             >
               {/* Left Column: Text and First Image */}
               <Box sx={{ flex: 1 }}>
-              <Typography variant="h5" sx={{ fontSize: { xs: "1.5rem", md: "2rem" } }}>
-                {Interest.title}
+              <Typography variant="h5" >
+              <strong> {Interest.title}</strong> 
               </Typography>
-              <Typography variant="body1" sx={{ fontSize: { xs: "1rem", md: "1.1rem" } }}>
+              <Typography variant="body1" sx={{ fontSize: "1.106rem" }}>
                 {Interest.description}
               </Typography>
 

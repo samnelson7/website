@@ -144,7 +144,7 @@ export default function ProjectsPage() {
             <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}
                         >
                         <AssignmentIcon sx={{ fontSize: 28, color: "black" }} />
-                        Projects
+                        <strong>Projects</strong> 
                         </Box>
             <Link href="/contact" >
               <Typography variant="body1" component="span">
@@ -166,7 +166,7 @@ export default function ProjectsPage() {
               >
                 <Box sx={{ flex: 1, padding: "20px" }}>
                   {/* Project Title (No Expand Button Here) */}
-                  <Typography variant="h5">{project.title}</Typography>
+                  <Typography variant="h5"><strong> {project.title}</strong> </Typography>
 
                   {/* Description Section */}
                   <Box
