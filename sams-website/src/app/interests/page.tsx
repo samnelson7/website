@@ -139,7 +139,7 @@ export default function InterestsPage() {
               <Typography variant="h5" >
               <strong> {Interest.title}</strong> 
               </Typography>
-              <Typography variant="body1" sx={{ fontSize: "1.106rem" }}>
+              <Typography variant="body1" sx={{ fontSize: "17.7px" }}>
                 {Interest.description}
               </Typography>
 
