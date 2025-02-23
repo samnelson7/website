@@ -79,7 +79,7 @@ const Header: React.FC = () => {
   return (
     <AppBar position="sticky" sx={{ bgcolor: "#1c375d" }}>
       <Toolbar sx={{ display: "flex", alignItems: "center" }}>
-        <IconButton color="inherit" edge="start" onClick={toggleDrawer(true)} sx={{ display: { md: "none" } }}>
+        <IconButton color="inherit" edge="start" onClick={toggleDrawer(true)} sx={{ display: { lg: "none" } }}>
           <MenuIcon />
         </IconButton>
 
@@ -87,7 +87,7 @@ const Header: React.FC = () => {
           Sam Nelson
         </Typography>
 
-        <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center", ml: 4 }}>
+        <Box sx={{ display: { xs: "none", lg: "flex" }, alignItems: "center", ml: 4 }}>
           {navLinks.map(({ text, to }, index) => (
             <React.Fragment key={index}>
               <Button

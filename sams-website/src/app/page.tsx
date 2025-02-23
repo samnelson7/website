@@ -95,49 +95,48 @@ const Page = () => {
             ENGINEER
           </Typography>
           <Box
-  sx={{
-    backgroundColor: "white",
-    p: 3,
-    borderRadius: 2,
-    boxShadow: 3,
-    maxWidth: { xs: "95%", md: "100%" }, // Adjust width for better readability
-    width: { xs: "95%", md: "100%" }, // Set width to match maxWidth for consistency
-    color: "black",
-    mt: { xs: 40, md: 0 },
-    mb: {xs:2, md:0},
-  }}
->
-  <Typography
-    variant="body1"
-    component="p"
-    sx={{
-      fontFamily: "'Roboto', sans-serif",
-      fontSize: "18px",
-      lineHeight: 1.8,
-      color: "black",
-      textShadow: "none",
-    }}
-  >
-    <span style={{ display: 'block' }}>
-      <Link href="/education">Education:</Link> Bachelor of Software Engineering
-    </span>
-    <span style={{ display: 'block' }}>
-      <Link href="/work">Work:</Link> Tekla API Developer, QA Automation Developer, Software Intern
-    </span>
-    <span style={{ display: 'block' }}>
-      <Link href="/projects">Projects:</Link> WAVTool, VirtualER, Automated Feedback for Engineering
-    </span>
-    <span style={{ display: 'block' }}>
-      <Link href="/techtools">Technologies:</Link> C#, C, Java, Python, Perl, R, JUnit, Postgres, and more.
-    </span>
-    <span style={{ display: 'block' }}>
-      <Link href="/interests">Interests:</Link> Basketball, travel, hiking, paddling, and dinosaurs! 
-    </span>
-    <span style={{ display: 'block' }}>
-      <Link href="/contact">Contact:</Link> Reach out to me!
-    </span>
-  </Typography>
-</Box>
+            sx={{
+              backgroundColor: "white",
+              p: 3,
+              borderRadius: 2,
+              boxShadow: 3,
+              maxWidth: { xs: "95%", sm: "95%", md: "80%", lg: "100%" }, 
+              color: "black",
+              mt: { xs: 40, sm:40, md: 0 },
+              mb: {xs:2, md:0},
+            }}
+          >
+            <Typography
+              variant="body1"
+              component="p"
+              sx={{
+                fontFamily: "'Roboto', sans-serif",
+                fontSize: "18px",
+                lineHeight: 1.8,
+                color: "black",
+                textShadow: "none",
+              }}
+            >
+              <span style={{ display: 'block' }}>
+                <Link href="/education">Education:</Link> Bachelor of Software Engineering
+              </span>
+              <span style={{ display: 'block' }}>
+                <Link href="/work">Work:</Link> Tekla API Developer, QA Automation Developer, Software Intern
+              </span>
+              <span style={{ display: 'block' }}>
+                <Link href="/projects">Projects:</Link> WAVTool, VirtualER, Automated Feedback for Engineering
+              </span>
+              <span style={{ display: 'block' }}>
+                <Link href="/techtools">Technologies:</Link> C#, C, Java, Python, Perl, R, JUnit, Postgres, and more.
+              </span>
+              <span style={{ display: 'block' }}>
+                <Link href="/interests">Interests:</Link> Basketball, travel, hiking, paddling, and dinosaurs! 
+              </span>
+              <span style={{ display: 'block' }}>
+                <Link href="/contact">Contact:</Link> Reach out to me!
+              </span>
+            </Typography>
+          </Box>
 
         </Box>
       </Box>
