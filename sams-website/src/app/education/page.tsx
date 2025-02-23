@@ -78,50 +78,70 @@ export default function Layout() {  // Removed `children` prop here
           </Typography>
 
           <Box 
-  sx={{ 
-    display: "flex", 
-    alignItems: "stretch", 
-    justifyContent: "space-between", 
-    gap: 3, 
-  }}
->
-  {/* Left Side: Text Content */}
-  <Box sx={{ flex: 1 }}>
-    <Typography variant="h6" component="h2" gutterBottom>
-    <strong> Bachelor of Software Engineering</strong> 
-    </Typography>
+            sx={{ 
+              display: "flex", 
+              alignItems: "stretch", 
+              justifyContent: "space-between", 
+              gap: 3, 
+            }}
+          >
+            {/* Left Side: Text Content */}
+            <Box sx={{ flex: 1 }}>
+              <Typography variant="h6" component="h2" gutterBottom>
+              <strong> Bachelor of Software Engineering</strong> 
+              </Typography>
 
-    <Typography variant="body1" gutterBottom>
-    <strong> University of Victoria (2021-2026)</strong> 
-    </Typography>
+              <Typography variant="body1" gutterBottom>
+              <strong> University of Victoria (2021-2026)</strong> 
+              </Typography>
+              
+              <Typography
+                variant="body2"
+                gutterBottom
+                sx={{
+                  maxWidth: { xs: "80%", md: "70%" },
+                  whiteSpace: "pre-line", 
+                  textIndent: "-0.8em",
+                  paddingLeft: "1em", 
+                  display: "block",
+                }}
+              >
+                {"▪ High achieving student with a 90% GPA."}
+              </Typography>
+              <Typography
+                variant="body2"
+                gutterBottom
+                sx={{
+                  maxWidth: { xs: "80%", md: "70%" },
+                  whiteSpace: "pre-line", 
+                  textIndent: "-0.8em",
+                  paddingLeft: "1em", 
+                  display: "block",
+                }}
+              >
+                {"▪ Performed joint research on generating automated feedback to improve student outcomes."}
+              </Typography>
+              
+              <Typography variant="body2" gutterBottom sx={{ maxWidth: { xs: "80%", md: "70%" } }}>
+                <br/>
+                Check out <Link href="/projects">Automated Feedback for Engineering</Link> in my projects!
+              </Typography>
+            </Box>
 
-    <Typography variant="body2" gutterBottom>
-      ▪ High achieving student with a 90% GPA
-    </Typography>
-
-    <Typography variant="body2" gutterBottom sx={{ maxWidth: { xs: "50%", md: "70%" } }}>
-      ▪ Performed joint research on generating automated feedback to improve student outcomes. 
-    </Typography>
-    <Typography variant="body2" gutterBottom sx={{ maxWidth: { xs: "50%", md: "70%" } }}>
-      <br/>
-      Check out <Link href="/projects">Automated Feedback for Engineering</Link> in my projects!
-    </Typography>
-  </Box>
-
-  {/* Right Side: Image */}
-  <Box 
-    component="img" 
-    src="/images/ECS.jpg" 
-    alt="Picture of UVic" 
-    sx={{ 
-      height: "100%", 
-      width: "auto", 
-      display: {xs: "none", md: "block"},
-      maxHeight: 210, // Adjust based on your needs
-      alignSelf: "flex-start", // Aligns the top of the image with the top of the text
-    }} 
-  />
-</Box>
+            {/* Right Side: Image */}
+            <Box 
+              component="img" 
+              src="/images/ECS.jpg" 
+              alt="Picture of UVic" 
+              sx={{ 
+                height: "100%", 
+                width: "auto", 
+                display: {xs: "none", md: "block"},
+                maxHeight: 210, // Adjust based on your needs
+                alignSelf: "flex-start", // Aligns the top of the image with the top of the text
+              }} 
+            />
+          </Box>
 
             <hr style={{ margin: "20px 0", borderColor: "#ccc" }} />
           </Box>
@@ -172,49 +192,91 @@ export default function Layout() {  // Removed `children` prop here
             <Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
             <strong> Valerie Kuehne Undergraduate Research Award</strong> 
             </Typography>
-            <Typography variant="body2" gutterBottom sx={{ marginBottom: 2 }}>
+            <Typography variant="body2" gutterBottom sx={{
+              marginBottom: 2,
+              whiteSpace: "pre-line", 
+              textIndent: "-0.8em",
+              paddingLeft: "1em", 
+              display: "block",
+            }}>
               ▪ Awarded for academic achievements and a proposal for joint research which led to the development of an <Link href="/projects">innovative software solution</Link> through the grant to create automated feedback responses based on diverse student inputs
             </Typography>
 
             <Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
             <strong> UVic Excellence Scholarship</strong> 
             </Typography>
-            <Typography variant="body2" gutterBottom sx={{ marginBottom: 2 }}>
+            <Typography variant="body2" gutterBottom sx={{
+              marginBottom: 2,
+              whiteSpace: "pre-line", 
+              textIndent: "-0.8em",
+              paddingLeft: "1em", 
+              display: "block",
+            }}>
               ▪ Retained and upheld throughout degree based on a high GPA
             </Typography>
 
             <Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
             <strong> Faculty of Engineering and Computer Science: Dean&apos;s Entrance Scholarship</strong> 
             </Typography>
-            <Typography variant="body2" gutterBottom sx={{ marginBottom: 2 }}>
+            <Typography variant="body2" gutterBottom sx={{
+              marginBottom: 2,
+              whiteSpace: "pre-line", 
+              textIndent: "-0.8em",
+              paddingLeft: "1em", 
+              display: "block",
+            }}>
               ▪ Won based on exceptional academic achievement upon entering first year at UVic
             </Typography>
 
             <Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
             <strong> Major W. Horan Memorial Scholarship</strong> 
             </Typography>
-            <Typography variant="body2" gutterBottom sx={{ marginBottom: 2 }}>
+            <Typography variant="body2" gutterBottom sx={{
+              marginBottom: 2,
+              whiteSpace: "pre-line", 
+              textIndent: "-0.8em",
+              paddingLeft: "1em", 
+              display: "block",
+            }}>
               ▪ Received for academic excellence upon entering first year at UVic
             </Typography>
 
             <Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
             <strong>  District/Authority Scholarship</strong> 
             </Typography>
-            <Typography variant="body2" gutterBottom sx={{ marginBottom: 2 }}>
+            <Typography variant="body2" gutterBottom sx={{
+              marginBottom: 2,
+              whiteSpace: "pre-line", 
+              textIndent: "-0.8em",
+              paddingLeft: "1em", 
+              display: "block",
+            }}>
               ▪ Obtained for excellence in Physical Activity and Health, with recognition for volunteering, coaching, and active involvement in school and community sports programs
             </Typography>
 
             <Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
             <strong> Ridge Meadows Soccer Club Scholarship</strong> 
             </Typography>
-            <Typography variant="body2" gutterBottom sx={{ marginBottom: 2 }}>
+            <Typography variant="body2" gutterBottom sx={{
+              marginBottom: 2,
+              whiteSpace: "pre-line", 
+              textIndent: "-0.8em",
+              paddingLeft: "1em", 
+              display: "block",
+            }}>
               ▪ Granted for volunteer coaching, playing contributions, and references
             </Typography>
 
             <Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
             <strong> Top Science/French Student</strong> 
             </Typography>
-            <Typography variant="body2" gutterBottom sx={{ marginBottom: 2 }}>
+            <Typography variant="body2" gutterBottom sx={{
+              marginBottom: 2,
+              whiteSpace: "pre-line", 
+              textIndent: "-0.8em",
+              paddingLeft: "1em", 
+              display: "block",
+            }}>
               ▪ Earned in high school for highest grades in Biology, Chemistry, and Physics combined, and in the French immersion program in a graduating class of 200
             </Typography>
 
