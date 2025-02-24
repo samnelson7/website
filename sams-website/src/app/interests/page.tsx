@@ -101,7 +101,7 @@ export default function InterestsPage() {
         />
 
         {/* Main Content */}
-        <Box sx={{ flex: 1, marginLeft: "10%", marginRight: "10%", padding: "20px" }}>
+        <Box sx={{ flex: 1, marginLeft: {xs: "0%", md: "10%"}, marginRight: {xs: "0%", md: "10%"}, padding: "20px" }}>
         <Typography 
           variant="h4" 
           component="h1" 
