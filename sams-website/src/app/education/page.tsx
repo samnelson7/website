@@ -76,7 +76,7 @@ export default function Layout() {  // Removed `children` prop here
               </Typography>
             </Link>
           </Typography>
-
+          <hr style={{ margin: "20px 0", borderColor: "#ccc" }} />
           <Box 
             sx={{ 
               display: "flex", 
@@ -87,11 +87,11 @@ export default function Layout() {  // Removed `children` prop here
           >
             {/* Left Side: Text Content */}
             <Box sx={{ flex: 1 }}>
-              <Typography variant="h6" component="h2" gutterBottom>
+              <Typography variant="h5" component="h2" gutterBottom>
               <strong> Bachelor of Software Engineering</strong> 
               </Typography>
 
-              <Typography variant="body1" gutterBottom>
+              <Typography variant="h6" gutterBottom>
               <strong> University of Victoria (2021-2026)</strong> 
               </Typography>
               
@@ -147,7 +147,7 @@ export default function Layout() {  // Removed `children` prop here
           </Box>
 
           <Box>
-            <Typography variant="h4" component="h1" gutterBottom
+            <Typography variant="h5" component="h1" gutterBottom
             sx={{ display: "flex", alignItems: "center", gap: 1 }}>
               <strong> Relevant Coursework</strong> 
             </Typography>
@@ -181,7 +181,7 @@ export default function Layout() {  // Removed `children` prop here
           {/* Awards Section */}
           <Box sx={{ marginTop: 4 }}>
           <Typography 
-            variant="h4" 
+            variant="h5" 
             component="h1" 
             gutterBottom 
             sx={{ display: "flex", alignItems: "center", gap: 1 }}
@@ -189,7 +189,7 @@ export default function Layout() {  // Removed `children` prop here
             <strong> Awards</strong> 
           </Typography>
 
-            <Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
+            <Typography variant="body1" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
             <strong> Valerie Kuehne Undergraduate Research Award</strong> 
             </Typography>
             <Typography variant="body2" gutterBottom sx={{
@@ -202,7 +202,7 @@ export default function Layout() {  // Removed `children` prop here
               ▪ Awarded for academic achievements and a proposal for joint research which led to the development of an <Link href="/projects">innovative software solution</Link> through the grant to create automated feedback responses based on diverse student inputs
             </Typography>
 
-            <Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
+            <Typography variant="body1" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
             <strong> UVic Excellence Scholarship</strong> 
             </Typography>
             <Typography variant="body2" gutterBottom sx={{
@@ -215,7 +215,7 @@ export default function Layout() {  // Removed `children` prop here
               ▪ Retained and upheld throughout degree based on a high GPA
             </Typography>
 
-            <Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
+            <Typography variant="body1" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
             <strong> Faculty of Engineering and Computer Science: Dean&apos;s Entrance Scholarship</strong> 
             </Typography>
             <Typography variant="body2" gutterBottom sx={{
@@ -228,7 +228,7 @@ export default function Layout() {  // Removed `children` prop here
               ▪ Won based on exceptional academic achievement upon entering first year at UVic
             </Typography>
 
-            <Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
+            <Typography variant="body1" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
             <strong> Major W. Horan Memorial Scholarship</strong> 
             </Typography>
             <Typography variant="body2" gutterBottom sx={{
@@ -241,7 +241,7 @@ export default function Layout() {  // Removed `children` prop here
               ▪ Received for academic excellence upon entering first year at UVic
             </Typography>
 
-            <Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
+            <Typography variant="body1" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
             <strong>  District/Authority Scholarship</strong> 
             </Typography>
             <Typography variant="body2" gutterBottom sx={{
@@ -254,7 +254,7 @@ export default function Layout() {  // Removed `children` prop here
               ▪ Obtained for excellence in Physical Activity and Health, with recognition for volunteering, coaching, and active involvement in school and community sports programs
             </Typography>
 
-            <Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
+            <Typography variant="body1" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
             <strong> Ridge Meadows Soccer Club Scholarship</strong> 
             </Typography>
             <Typography variant="body2" gutterBottom sx={{
@@ -267,7 +267,7 @@ export default function Layout() {  // Removed `children` prop here
               ▪ Granted for volunteer coaching, playing contributions, and references
             </Typography>
 
-            <Typography variant="h6" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
+            <Typography variant="body1" component="h2" gutterBottom sx={{ marginBottom: 0 }}>
             <strong> Top Science/French Student</strong> 
             </Typography>
             <Typography variant="body2" gutterBottom sx={{
