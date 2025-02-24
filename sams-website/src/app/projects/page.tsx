@@ -152,7 +152,7 @@ export default function ProjectsPage() {
               </Typography>
             </Link>
           </Typography>
-          <hr style={{ margin: "20px 0", borderColor: "#ccc" }} />
+          <hr style={{ margin: "20px", borderColor: "#ccc" }} />
 
           {projects.map((project, index) => (
             <Box key={project.title}>
@@ -282,7 +282,7 @@ export default function ProjectsPage() {
 
 
               {index < projects.length - 1 && (
-                <hr style={{ margin: "20px 0", borderColor: "#ccc", borderWidth: "1px", borderStyle: "solid" }} />
+                <hr style={{ margin: "20px", borderColor: "#ccc", borderWidth: "1px", borderStyle: "solid" }} />
               )}
             </Box>
           ))}
