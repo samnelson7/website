@@ -75,7 +75,8 @@ export default function Layout() {
                   borderRadius: 2,
                   textDecoration: "none",
                   color: "inherit",
-                  height: "250px",
+                  width: "100%",
+                  aspectRatio: "5 / 3", 
                   cursor: "pointer", // Make it clickable
                   "&:hover": {
                     backgroundColor: "#1c375d",
@@ -105,7 +106,8 @@ export default function Layout() {
                   borderRadius: 2,
                   textDecoration: "none",
                   color: "inherit",
-                  height: "250px",
+                  width: "100%",
+                  aspectRatio: "5 / 3", 
                   cursor: "pointer", // Make it clickable
                   "&:hover": {
                     backgroundColor: "#1c375d",
@@ -133,7 +135,8 @@ export default function Layout() {
                   borderRadius: 2,
                   textDecoration: "none",
                   color: "inherit",
-                  height: "250px",
+                  width: "100%",
+                  aspectRatio: "5 / 3", 
                   cursor: "pointer", // Make it clickable
                   "&:hover": emailClicked ? undefined : {
                     backgroundColor: "#1c375d",
