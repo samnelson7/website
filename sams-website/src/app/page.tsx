@@ -121,13 +121,13 @@ const Page = () => {
                 <Link href="/education">Education:</Link> Bachelor of Software Engineering
               </span>
               <span style={{ display: 'block' }}>
-                <Link href="/work">Work:</Link> Tekla API Developer, QA Automation Developer, Software Intern
+                <Link href="/work">Work:</Link> Teaching Assistant, Tekla API Developer, QA Automation Developer
               </span>
               <span style={{ display: 'block' }}>
                 <Link href="/projects">Projects:</Link> WAVTool, VirtualER, Automated Feedback for Engineering
               </span>
               <span style={{ display: 'block' }}>
-                <Link href="/techtools">Technologies:</Link> C#, C, Java, Python, Perl, R, JUnit, Postgres, and more.
+                <Link href="/techtools">Technologies:</Link> C++, C#, C, Java, Python, Perl, R, JUnit, Postgres, and more.
               </span>
               <span style={{ display: 'block' }}>
                 <Link href="/interests">Interests:</Link> Basketball, travel, hiking, paddling, and dinosaurs! 
