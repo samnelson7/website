@@ -46,9 +46,9 @@ export default function Layout() {  // Removed `children` prop here
                   />
                 )}
 
-        {/* Main Content Area (Centered) */}
+        {/* Main Content Area */}
         <Container
-          maxWidth="md"
+          maxWidth="lg"
           sx={{
             position: "relative",
             zIndex: 1,
@@ -155,6 +155,7 @@ export default function Layout() {  // Removed `children` prop here
             {/* Grid Layout for Two Columns */}
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
+                <Typography variant="body2" gutterBottom>▪ Advanced Programming Techniques for Robust Efficient Computing</Typography>
                 <Typography variant="body2" gutterBottom>▪ Algorithms and Data Structures</Typography>
                 <Typography variant="body2" gutterBottom>▪ Discrete Mathematics</Typography>
                 <Typography variant="body2" gutterBottom>▪ Computer Architecture</Typography>
@@ -162,6 +163,8 @@ export default function Layout() {  // Removed `children` prop here
                 <Typography variant="body2" gutterBottom>▪ Database Systems</Typography>
                 <Typography variant="body2" gutterBottom>▪ Software Architecture and Design</Typography>
                 <Typography variant="body2" gutterBottom>▪ Software Testing</Typography>
+                <Typography variant="body2" gutterBottom>▪ Digital Signal Processing</Typography>
+                <Typography variant="body2" gutterBottom>▪ Real Time Computer Systems</Typography>
               </Grid>
 
               <Grid item xs={12} sm={6}>
@@ -171,7 +174,10 @@ export default function Layout() {  // Removed `children` prop here
                 <Typography variant="body2" gutterBottom>▪ Communication Networks</Typography>
                 <Typography variant="body2" gutterBottom>▪ Microprocessor-Based Systems</Typography>
                 <Typography variant="body2" gutterBottom>▪ Control Theory and Systems</Typography>
+                <Typography variant="body2" gutterBottom>▪ Intro to Artificial Intelligence</Typography>
                 <Typography variant="body2" gutterBottom>▪ Continuous-Time Signals and Systems</Typography>
+                <Typography variant="body2" gutterBottom>▪ Embedded Systems</Typography>
+                <Typography variant="body2" gutterBottom>▪ Software Quality Engineering</Typography>
               </Grid>
             </Grid>
 

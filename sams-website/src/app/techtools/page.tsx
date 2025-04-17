@@ -49,6 +49,11 @@ export default function TechToolsPage() {
         sampleCode: `#include <stdio.h>\nint main() {\n  printf("This was the first language I learned and what got me interested in programming!\\n");\n  return 0;\n}`
       },
       { 
+        name: "C++", 
+        icon: <Image src="/images/C++Logo.png" alt="C++ Logo" width={60} height={60} />,
+        sampleCode: `#include <cstdlib>\nint main() {\n  cout << "Learned in great depth through 'Advanced Programming Techniques for Robust Efficient Computing'";\n  return 0;\n}`
+      },
+      { 
         name: "C#", 
         icon: <Image src="/images/CSharpLogo.png" alt="C# Logo" width={60} height={60} />,
         sampleCode: `using System;\nclass Program {\n  static void Main() {\n    Console.WriteLine("I created many Tekla plugins in C# with Tekla Open API including the WAV Tool visible on the projects page!");\n  }\n}`

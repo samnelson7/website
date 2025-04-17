@@ -51,7 +51,7 @@ export default function Page() {
 
         {/* Main Content Area */}
         <Container
-          maxWidth="md"
+          maxWidth="lg"
           sx={{
             position: "relative",
             zIndex: 1,
@@ -61,7 +61,6 @@ export default function Page() {
             minHeight: "100%",
           }}
         >
-          {/* All your content goes here */}
           <Box>
           <Typography 
             variant="h4" 
@@ -88,6 +87,69 @@ export default function Page() {
 
           
           <hr style={{ margin: "20px 0", borderColor: "#ccc" }} />
+          <Typography
+            variant="h5"
+            component="h1"
+            gutterBottom
+            sx={{ display: "flex", alignItems: "center", gap: 1 }}
+          >
+            <strong> Undergraduate Teaching Assistant </strong> 
+          </Typography>
+            <Typography variant="h6" component="h1" gutterBottom>
+              University of Victoria, Victoria, May 2025 - Aug 2025
+            </Typography>
+            <Typography variant="body2" component="h1" gutterBottom sx={{
+              wordWrap: "break-word",
+              maxWidth: "80%",
+              whiteSpace: "pre-line", 
+              textIndent: "-0.8em",
+              paddingLeft: "1em", 
+              display: "block",
+            }}>
+              ▪ Designed exams and assignments for a third-year Operating Systems course, emphasizing real-world concepts like process control, memory management, and synchronization
+            </Typography>
+            <Typography variant="body2" gutterBottom sx={{
+              wordWrap: "break-word",
+              maxWidth: "80%",
+              whiteSpace: "pre-line", 
+              textIndent: "-0.8em",
+              paddingLeft: "1em", 
+              display: "block",
+            }}>
+              ▪ Led weekly tutorial sessions to reinforce course material, assist with assignments and exam preparation, and improve overall learning outcomes
+            </Typography>
+            <Typography variant="body2" component="h1" gutterBottom sx={{
+              wordWrap: "break-word",
+              maxWidth: "80%",
+              whiteSpace: "pre-line", 
+              textIndent: "-0.8em",
+              paddingLeft: "1em", 
+              display: "block",
+            }}>
+              ▪ Developed detailed assignment specifications to clearly communicate requirements and expectations to support student success 
+            </Typography>
+            <Typography variant="body2" gutterBottom sx={{
+              wordWrap: "break-word",
+              maxWidth: "80%",
+              whiteSpace: "pre-line", 
+              textIndent: "-0.8em",
+              paddingLeft: "1em", 
+              display: "block",
+            }}>
+              ▪ Graded assignments with consistency and accuracy, providing constructive feedback to support student learning
+            </Typography>
+            <Typography variant="body2" gutterBottom sx={{
+              wordWrap: "break-word",
+              maxWidth: "80%",
+              whiteSpace: "pre-line", 
+              textIndent: "-0.8em",
+              paddingLeft: "1em", 
+              display: "block",
+            }}>
+              ▪ Collaborated closely with the teaching team to ensure assessments and materials aligned with course objectives and academic standards
+            </Typography>
+
+            <hr style={{ margin: "20px 0", borderColor: "#ccc" }} />
 
           <Typography
             variant="h5"
