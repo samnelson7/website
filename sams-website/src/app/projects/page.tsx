@@ -22,12 +22,20 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "Broken Flight",
+    description: ["Being a lifelong video game fan, game development has been an interest of mine. The main thing stopping me from trying was simply the business of school, but recently between school terms I have made time to try it!", "The game I made was is a basic platformer where you play as a dimorphodon, a small pterosaur known for its big head compared to its tiny body. I love dinosaurs, so chosing a The game follows the character, who hurt itself falling out of its nest in the jungle, slowly regaining its movement ability as it looks for a new safe place to live with its family. This gives me lots of room to work with adding new movement options as the player completes various levels!", "I'm very excited to continue working on this project, as the completion of new game mechanics, art, and world construction in Unity have been very rewarding and a lot of fun. I have some other games in mind that I would like to work on over time, but they seemed like long time investments (like RPGs). The game has not yet been released, but will be featured on my Github as soon as I have a larger amount of it complete."],
+    mediaUrl: "/videos/GameDemo.mp4",
+    mediaType: "video",
+    technologies: ["C#", ".NET", "Unity"],
+    maxTextHeight: 253, 
+  },
+  {
     title: "Weld Access Verification Tool",
     description: ["This was a project I completed through my most recent co-op term. I don't generally include work projects but developing prototypes was largely self guided and completed with my fellow co-op student as a pair so I wanted to showcase it here.", "The AGT Robotics BeamMaster WAV (Weld Access Verification) Tool is an innovative Tekla plugin that revolutionizes weld planning in steel fabrication. By automatically integrating true-to-scale weld arm models into your Tekla environment, this powerful tool allows designers and engineers to visualize real-world welding scenarios, instantly identify potential access issues, and optimize projects for AGT BeamMaster robotic welding systems.", "I worked on this application during my time at Exact Detailing with one other co-op student. We found ourselves incredibly dedicated to the completion of this project and were able to complete and publish it over the course of our 4-month internships. We picked up the project from where some previous students had left off but wound up reworking most of the application due to changing business goals and project requirements. Working closely with AGT Robotics, we were able to publish this to an online catalog, Tekla Warehouse, where it can be downloaded for use by anybody with a Tekla license."],
     mediaUrl: "/videos/WAVDemo.mp4",
     mediaType: "video",
     technologies: ["C#", ".NET", "WPF", "Windows Forms"],
-    maxTextHeight: 253, // Example max height for this project description
+    maxTextHeight: 253,
   },
   {
     title: "VirtualER",
