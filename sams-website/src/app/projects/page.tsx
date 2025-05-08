@@ -22,8 +22,8 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Broken Flight",
-    description: ["Being a lifelong video game fan, game development has always been an interest of mine. The main thing stopping me from trying was simply the busyness of being a student, but recently between school terms I have made time to try it!", "The game I made was is a basic platformer where you play as a dimorphodon, a small pterosaur known for its big head compared to its tiny body. I love dinosaurs, so chosing a The game follows the character, who hurt itself falling out of its nest in the jungle, slowly regaining its movement ability as it looks for a new safe place to live with its family. This gives me lots of room to work with adding new movement options as the player completes various levels! I was also very fortunate to have the help of very talented artists. I got lots of free game assets online, but Vanessa Ruiz Capitan created the main character and its animations for which I am very grateful.", "I'm very excited to continue working on this project, as the completion of new game mechanics, art, and world construction in Unity have been very rewarding and a lot of fun. I have some other games in mind that I would like to work on over time, but they seemed like long time investments (like RPGs). The game has not yet been released, but will be featured on my Github as soon as I have a larger amount of it complete."],
+    title: "Fractured Flight",
+    description: [""],
     mediaUrl: "/videos/GameDemo.mp4",
     mediaType: "video",
     technologies: ["C#", ".NET", "Unity"],
@@ -204,6 +204,28 @@ export default function ProjectsPage() {
                           <Link href="https://github.com/samnelson7/Requirements-Engineering/blob/main/RD.md">
                             here
                           </Link>.
+                        </>
+                      ) : project.title === "Fractured Flight" ? (
+                        <>
+                        Being a lifelong video game fan, game development has always been an interest of mine. The main thing stopping me
+                         from trying was simply the busyness of being a student, but recently between terms I have made time to try it! The game is now featured on my Github {" "}
+                        <Link href="https://github.com/samnelson7/FracturedFlight">
+                          here
+                        </Link>.
+                        <br />
+                        <br />
+                        The game I made was is a basic platformer where you play as a dimorphodon, a small pterosaur known for its big head 
+                        compared to its tiny body. I love dinosaurs, so chosing a The game follows the character, who hurt itself falling out 
+                        of its nest in the jungle, slowly regaining its movement ability as it looks for a new safe place to live with its family. 
+                        This gives me lots of room to work with adding new movement options as the player completes various levels! I was also very 
+                        fortunate to have the help of very talented artists. I got lots of free game assets online, but Vanessa Ruiz Capitan created 
+                        the main character and its animations for which I am very grateful. 
+                        <br />
+                        <br />
+                        I'm very excited to continue working on this project, as the completion of new game mechanics, art, and world construction in 
+                        Unity have been very rewarding and a lot of fun. Being experienced with C# from past work experience made for a very smooth
+                        transition into writing scripts in Unity. I have some other games in mind that I would like to work on over time, but they 
+                        seemed like long time investments (like RPGs). 
                         </>
                       ) : (
                         <>
