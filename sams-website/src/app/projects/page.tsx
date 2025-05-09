@@ -222,7 +222,7 @@ export default function ProjectsPage() {
                         the main character and its animations for which I am very grateful. 
                         <br />
                         <br />
-                        I'm very excited to continue working on this project, as the completion of new game mechanics, art, and world construction in 
+                        I&#39;m very excited to continue working on this project, as the completion of new game mechanics, art, and world construction in 
                         Unity have been very rewarding and a lot of fun. Being experienced with C# from past work experience made for a very smooth
                         transition into writing scripts in Unity. I have some other games in mind that I would like to work on over time, but they 
                         seemed like long time investments (like RPGs). 
