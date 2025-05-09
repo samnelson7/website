@@ -1,13 +1,11 @@
 "use client"
 
 import { CssBaseline } from '@mui/material';
-import dynamic from 'next/dynamic';
 import Header from '../../components/Header';
 import { useEffect, useRef } from 'react';
 
 // Dynamically load UnityViewer to disable SSR
 function UnityViewerComponent() {
-  const unityInstanceRef = useRef(null);
 
   useEffect(() => {
     const script = document.createElement('script');
