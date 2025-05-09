@@ -19,8 +19,8 @@ function UnityViewerComponent() {
   }, []);
 
   return (
-    <div style={{ width: '90%', height: '90%', margin: '0 auto' }}>
-      <canvas id="unity-canvas" width="90%" height="90%" />
+    <div style={{ width: '960px', height: '600px', margin: '0 auto' }}>
+      <canvas id="unity-canvas" width="960" height="600" />
     </div>
   );
 }
@@ -31,7 +31,7 @@ export default function UnityPage() {
       <CssBaseline />
       <Header />
       <div style={{ paddingTop: '2rem' }}>
-        <iframe src="/WebGame/index.html" width={"90%"} height={"90%"} style={{border: "none", position: "absolute"}} allowFullScreen>
+        <iframe src="/WebGame/index.html" width={"100%"} height={"100%"} style={{border: "none", position: "absolute"}} allowFullScreen>
 
         </iframe>
         <UnityViewerComponent />
