@@ -27,6 +27,7 @@ import {
   Interests as InterestsIcon,
   ContactMail as ContactMailIcon,
   Email as EmailIcon,
+  SportsEsports as SportsEsportsIcon,
   LinkedIn as LinkedInIcon,
   GitHub as GitHubIcon,
 } from "@mui/icons-material";
@@ -74,6 +75,7 @@ const Header: React.FC = () => {
     { text: "Technologies and Tools", to: "/techtools", icon: <BuildIcon /> },
     { text: "Interests", to: "/interests", icon: <InterestsIcon /> },
     { text: "Contact", to: "/contact", icon: <ContactMailIcon /> },
+    { text: "Fractured Flight", to: "/game", icon: <SportsEsportsIcon /> },
   ];
 
   return (

@@ -208,8 +208,12 @@ export default function ProjectsPage() {
                       ) : project.title === "Fractured Flight" ? (
                         <>
                         Being a lifelong video game fan, game development has always been an interest of mine. The main thing stopping me
-                         from trying was simply the busyness of being a student, but recently between terms I have made time to try it! The game is now featured on my Github {" "}
+                         from trying was simply the busyness of being a student, but recently between terms I have made time to try it! The game is now featured on my {" "}
                         <Link href="https://github.com/samnelson7/FracturedFlight">
+                          Github
+                        </Link>
+                        {" "} and on my website {" "}
+                        <Link href="/game">
                           here
                         </Link>.
                         <br />

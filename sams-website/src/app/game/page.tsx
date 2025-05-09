@@ -4,7 +4,6 @@ import { CssBaseline } from '@mui/material';
 import Header from '../../components/Header';
 import { useEffect } from 'react';
 
-// Dynamically load UnityViewer to disable SSR
 function UnityViewerComponent() {
 
   useEffect(() => {
@@ -26,7 +25,6 @@ function UnityViewerComponent() {
   );
 }
 
-// Main Page Component
 export default function UnityPage() {
   return (
     <>
