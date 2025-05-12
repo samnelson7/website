@@ -208,7 +208,7 @@ export default function ProjectsPage() {
                       ) : project.title === "Fractured Flight" ? (
                         <>
                         Being a lifelong video game fan, game development has always been an interest of mine. The main thing stopping me
-                         from trying was simply the busyness of being a student, but recently between terms I have made time to try it! The game is now featured on my {" "}
+                         from trying was the busyness of being a student, but recently I have made time to give it a try! The game is now featured on my {" "}
                         <Link href="https://github.com/samnelson7/FracturedFlight">
                           Github
                         </Link>
@@ -218,18 +218,18 @@ export default function ProjectsPage() {
                         </Link>.
                         <br />
                         <br />
-                        The game I made was is a basic platformer where you play as a dimorphodon, a small pterosaur known for its big head 
-                        compared to its tiny body. I love dinosaurs, so chosing a The game follows the character, who hurt itself falling out 
-                        of its nest in the jungle, slowly regaining its movement ability as it looks for a new safe place to live with its family. 
+                        The game I made is a basic platformer where you play as a dimorphodon, a small pterosaur known for its big head 
+                        compared to its tiny body because I love dinosaurs. To begin the game, the dimorphodon hurts itself falling out 
+                        of its nest in the jungle, slowly regaining its movement abilities as it looks for a new safe place to live with its family. 
                         This gives me lots of room to work with adding new movement options as the player completes various levels! I was also very 
-                        fortunate to have the help of very talented artists. I got lots of free game assets online, but Vanessa Ruiz Capitan created 
-                        the main character and its animations for which I am very grateful. 
+                        fortunate to have the help of very talented artists. I used many free game assets found online, but Vanessa Ruiz Capitan created 
+                        the main character and its animations, for which I am very grateful. Upcoming features include enemies with simple pathfinding AI
+                        using A*, boss fights, and the second world where new movement options will become available.
                         <br />
                         <br />
-                        I&#39;m very excited to continue working on this project, as the completion of new game mechanics, art, and world construction in 
-                        Unity have been very rewarding and a lot of fun. Being experienced with C# from past work experience made for a very smooth
-                        transition into writing scripts in Unity. I have some other games in mind that I would like to work on over time, but they 
-                        seemed like long time investments (like RPGs). 
+                        I&#39;m very excited to continue working on this project, as the completion of new game mechanics, art, and world design in 
+                        Unity have been very rewarding and a lot of fun. Being experienced with C# from past work experience helped me transition smoothly
+                      to scripting in Unity. I have other game ideas in mind that I would like to work on over time, though some (like RPGs) feel like long-term investments.
                         </>
                       ) : (
                         <>
